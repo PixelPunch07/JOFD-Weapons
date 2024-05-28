@@ -889,8 +889,12 @@ function PlayerLifesteal(ply, dmginfo)
     local attacker = dmginfo:GetAttacker()
     if attacker:IsPlayer() and ply:IsPlayer() and attacker != ply and attacker:GetActiveWeapon():GetClass() == hevtag then
         local damage = dmginfo:GetDamage()
+		if ply:Health() < ply:GetMaxHealth() then
            ply:SetHealth(ply:Health() + 500)
+		end
+		if ply:Armor() < ply:GetMaxArmor() then
 		   ply:SetArmor(ply:Armor() + 250) 
+		end
 		    end
         end
 
