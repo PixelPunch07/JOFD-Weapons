@@ -45,8 +45,8 @@ SWEP.Primary.Automatic		= true
 SWEP.Primary.Delay		= 0.06
 SWEP.Primary.Ammo 		= "ar2"
 SWEP.Primary.Force = 2400
-SWEP.Primary.Damage = 17044
-SWEP.Primary.Spread = 0.5
+SWEP.Primary.Damage = 16000
+SWEP.Primary.Spread = 0.6
 SWEP.Primary.Recoil = 0.01
 
 SWEP.Secondary.ScopeZoom	= 10
