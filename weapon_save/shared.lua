@@ -906,14 +906,7 @@ end
 
 function SWEP:SecondaryAttack()
 
-
-	if self.Owner:KeyDown(IN_RELOAD) then
-	     if self.Owner:GetNWInt("DETERMINATION") >= 2 then
-			self.BoneStorm = true
-		end
-	end
-
-if self.Owner:GetNWBool("injectionused") == false and self.Owner:GetNWBool("DETERMINATION") <= 2000 and self.BoneStorm == false then 
+if self.Owner:GetNWBool("injectionused") == false and self.Owner:GetNWBool("DETERMINATION") <= 2000 and not self.Owner:KeyDown(IN_RELOAD) then 
 self.Owner:SetNWInt("maxDT", self.Owner:GetNWInt("maxDT") -15000 )
 self.Owner:SetNWInt("DETERMINATION", 15000)
 local DING = self.Owner:GetNWInt("DETERMINATION") / 3500 * 1.6
@@ -922,7 +915,7 @@ self.Owner:SetNWInt("injectionused", true)
 
  end
 
-if self.Owner:KeyDown(IN_ATTACK2) and self.BoneStorm == true and self.Owner:GetNWInt("DETERMINATION") >= 2 then
+if self.Owner:KeyDown(IN_ATTACK2) and self.Owner:GetNWInt("DETERMINATION") >= 2 then
 		if SERVER then
 			local trace = {}
 				trace.start = self.Owner:GetShootPos()
