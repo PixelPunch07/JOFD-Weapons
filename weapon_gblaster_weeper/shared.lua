@@ -13,8 +13,8 @@ killicon.Add("weapon_gblaster_badtime", "effects/killicons/weapon_gblaster", col
 SWEP.WepSelectIcon		= surface.GetTextureID("HUD/swepicons/weapon_gblaster/icon") 
 end
 
-SWEP.Category			= "Journey of the Damned"
-SWEP.PrintName			= "THE WEEPER"
+SWEP.Category			= "Council of Death"
+SWEP.PrintName			= "Apostate of Hate"
 SWEP.Slot			= 3
 SWEP.SlotPos			= 4
 SWEP.DrawAmmo			= true
@@ -45,8 +45,8 @@ SWEP.Primary.Automatic		= true
 SWEP.Primary.Delay		= 0.08
 SWEP.Primary.Ammo 		= "ar2"
 SWEP.Primary.Force = 2400
-SWEP.Primary.Damage = 1700
-SWEP.Primary.Spread = 0.6
+SWEP.Primary.Damage = 14000
+SWEP.Primary.Spread = 0.8
 SWEP.Primary.Recoil = 0.01
 
 SWEP.Secondary.ScopeZoom	= 10
@@ -67,36 +67,9 @@ SWEP.RunSightsAng = Vector (-19.8471, -33.9181, 10)
 local IRONSIGHT_TIME = 0.4
 
 SWEP.VElements = {
-	["Console+++"] = { type = "Model", model = "models/ultrakill_coin.mdl", bone = "Base", rel = "", pos = Vector(-3.008, -5.968, -17.49), angle = Angle(95.396, 78.268, 180), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["Gaster"] = { type = "Model", model = "models/evangelos/undertale/gasterblaster.mdl", bone = "Base", rel = "", pos = Vector(0, -2.991, 10.357), angle = Angle(90, 0, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 0, 0, 255), surpresslightning = false, material = "Models/effects/comball_sphere", skin = 0, bodygroup = {} },
-	["Console+++++++++"] = { type = "Model", model = "models/props_lab/console02c.mdl", bone = "Base", rel = "", pos = Vector(-2.922, 1.46, -17.49), angle = Angle(0, 0, -90), size = Vector(0.18, 0.18, 0.18), color = Color(255, 0, 0, 255), surpresslightning = false, material = "Models/effects/comball_sphere", skin = 0, bodygroup = {} },
-	["Console++++++++"] = { type = "Model", model = "models/props_lab/console02c.mdl", bone = "Base", rel = "", pos = Vector(-2.922, 1.46, -17.49), angle = Angle(0, 0, -90), size = Vector(0.18, 0.18, 0.18), color = Color(108, 0, 0, 255), surpresslightning = false, material = "models/debug/debugwhite", skin = 0, bodygroup = {} },
-	["Console"] = { type = "Model", model = "models/props_lab/console02c.mdl", bone = "Base", rel = "", pos = Vector(-2.922, 1.46, -17.49), angle = Angle(0, 0, -90), size = Vector(0.18, 0.18, 0.18), color = Color(255, 0, 0, 255), surpresslightning = false, material = "Models/effects/comball_sphere", skin = 0, bodygroup = {} },
-	["Console+++++"] = { type = "Model", model = "models/hunter/blocks/cube025x2x025.mdl", bone = "Base", rel = "", pos = Vector(1.034, -7.7, 5.074), angle = Angle(-0.06, -0.232, -0.022), size = Vector(0.112, 0.112, 0.112), color = Color(148, 0, 0, 255), surpresslightning = false, material = "models/debug/debugwhite", skin = 0, bodygroup = {} },
-	["Console++"] = { type = "Model", model = "models/weapons/sirris_sword.mdl", bone = "Base", rel = "", pos = Vector(-5, -10.41, -20.792), angle = Angle(-91.82, -180, 180), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["Console+"] = { type = "Model", model = "models/ultrakill_coin.mdl", bone = "Base", rel = "", pos = Vector(-2.922, -5.652, -17.49), angle = Angle(94.063, 83.987, 180), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["Laser"] = { type = "Model", model = "models/props_questionableethics/qe_primarylase5.mdl", bone = "Base", rel = "", pos = Vector(-0.917, 18.593, 0.615), angle = Angle(-90, 90, 0), size = Vector(0.2, 0.2, 0.2), color = Color(255, 0, 0, 255), surpresslightning = false, material = "Models/effects/comball_sphere", skin = 0, bodygroup = {} },
-	["Console+++++++"] = { type = "Model", model = "models/sprops/misc/tubes_superthin/size_1/tube_0_5.mdl", bone = "Base", rel = "", pos = Vector(0.241, -10.78, 6.501), angle = Angle(-0.178, 88.007, 89.032), size = Vector(0.82, 0.82, 0.82), color = Color(148, 0, 0, 255), surpresslightning = false, material = "models/debug/debugwhite", skin = 0, bodygroup = {} },
-	["Laser++"] = { type = "Model", model = "models/props_questionableethics/qe_primarylase5.mdl", bone = "Base", rel = "", pos = Vector(-0.917, 18.593, 0.615), angle = Angle(-90, 90, 0), size = Vector(0.2, 0.2, 0.2), color = Color(99, 0, 0, 255), surpresslightning = false, material = "models/debug/debugwhite", skin = 0, bodygroup = {} },
-	["Console++++"] = { type = "Model", model = "models/weapons/sirris_sword.mdl", bone = "Base", rel = "", pos = Vector(-6.277, -9.042, -20.792), angle = Angle(-91.82, -180, 180), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["Gaster+"] = { type = "Model", model = "models/evangelos/undertale/gasterblaster.mdl", bone = "Base", rel = "", pos = Vector(0, -2.991, 10.357), angle = Angle(90, 0, -90), size = Vector(0.5, 0.5, 0.5), color = Color(96, 0, 0, 255), surpresslightning = false, material = "models/debug/debugwhite", skin = 0, bodygroup = {} },
-	["Laser+"] = { type = "Model", model = "models/ultrakill/characters/bosses/gabriel/gabriel.mdl", bone = "Base", rel = "", pos = Vector(-1.127, 2.585, 11.609), angle = Angle(-90, 90, 0), size = Vector(0.097, 0.097, 0.097), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["Console++++++"] = { type = "Model", model = "models/hunter/blocks/cube025x2x025.mdl", bone = "Base", rel = "", pos = Vector(0.479, -11.339, 5.389), angle = Angle(0.012, 90.075, -0.022), size = Vector(0.127, 0.127, 0.127), color = Color(148, 0, 0, 255), surpresslightning = false, material = "models/debug/debugwhite", skin = 0, bodygroup = {} }
 }
 
 SWEP.WElements = {
-	["Console+++"] = { type = "Model", model = "models/weapons/sirris_sword.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(6.872, -11.714, -7.35), angle = Angle(4.844, 180, -114.895), size = Vector(0.714, 0.714, 0.714), color = Color(66, 0, 0, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["Gaster"] = { type = "Model", model = "models/evangelos/undertale/gasterblaster.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(24.965, -5.685, -9.4), angle = Angle(-30, 21.666, -157.198), size = Vector(0.384, 0.384, 0.384), color = Color(255, 0, 0, 255), surpresslightning = false, material = "Models/effects/comball_sphere", skin = 0, bodygroup = {} },
-	["Gaster+++"] = { type = "Model", model = "models/hunter/blocks/cube025x2x025.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(39.825, -7.525, -7.926), angle = Angle(174.253, 15.906, -108.696), size = Vector(0.074, 0.074, 0.074), color = Color(66, 0, 0, 255), surpresslightning = false, material = "models/debug/debugwhite", skin = 0, bodygroup = {} },
-	["Console++"] = { type = "Model", model = "models/props_lab/console02c.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(5.872, -0.667, -7.35), angle = Angle(-161.691, 98.208, -4.665), size = Vector(0.123, 0.123, 0.123), color = Color(255, 0, 0, 255), surpresslightning = false, material = "Models/effects/comball_sphere", skin = 0, bodygroup = {} },
-	["Console+"] = { type = "Model", model = "models/props_lab/console02c.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(5.872, -0.667, -7.35), angle = Angle(-161.691, 98.208, -4.665), size = Vector(0.123, 0.123, 0.123), color = Color(66, 0, 0, 255), surpresslightning = false, material = "models/debug/debugwhite", skin = 0, bodygroup = {} },
-	["Laser"] = { type = "Model", model = "models/props_questionableethics/qe_primarylase5.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(16.913, -0.159, 1.699), angle = Angle(175.675, 11.01, -21.651), size = Vector(0.112, 0.112, 0.112), color = Color(255, 0, 0, 255), surpresslightning = false, material = "Models/effects/comball_sphere", skin = 0, bodygroup = {} },
-	["Gaster++++"] = { type = "Model", model = "models/hunter/blocks/cube025x2x025.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(39.973, -8.162, -8.742), angle = Angle(175.205, 16.957, -20.418), size = Vector(0.054, 0.054, 0.054), color = Color(66, 0, 0, 255), surpresslightning = false, material = "models/debug/debugwhite", skin = 0, bodygroup = {} },
-	["Laser+"] = { type = "Model", model = "models/props_questionableethics/qe_primarylase5.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(16.913, -0.159, 1.699), angle = Angle(175.675, 11.01, -21.651), size = Vector(0.112, 0.112, 0.112), color = Color(66, 0, 0, 255), surpresslightning = false, material = "models/debug/debugwhite", skin = 0, bodygroup = {} },
-	["Console++++"] = { type = "Model", model = "models/weapons/sirris_sword.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(6.313, -14.636, -8.841), angle = Angle(4.844, 180, -114.895), size = Vector(0.714, 0.714, 0.714), color = Color(66, 0, 0, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["Gaster+"] = { type = "Model", model = "models/evangelos/undertale/gasterblaster.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(24.965, -5.685, -9.4), angle = Angle(-30, 21.666, -157.198), size = Vector(0.384, 0.384, 0.384), color = Color(66, 0, 0, 255), surpresslightning = false, material = "models/debug/debugwhite", skin = 0, bodygroup = {} },
-	["Console"] = { type = "Model", model = "models/props_lab/console02c.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(5.872, -0.667, -7.35), angle = Angle(-161.691, 98.208, -4.665), size = Vector(0.123, 0.123, 0.123), color = Color(255, 0, 0, 255), surpresslightning = false, material = "Models/effects/comball_sphere", skin = 0, bodygroup = {} },
-	["Gaster++"] = { type = "Model", model = "models/sprops/misc/tubes_superthin/size_1/tube_0_5.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(39.825, -7.999, -7.926), angle = Angle(84.108, 16.368, -92.067), size = Vector(1.09, 1.09, 1.09), color = Color(66, 0, 0, 255), surpresslightning = false, material = "models/debug/debugwhite", skin = 0, bodygroup = {} }
 }
 function SWEP:Initialize()
 
@@ -770,7 +743,7 @@ function SWEP:PrimaryAttack()
 			if ( self.LoopSound ) then
 				self.LoopSound:ChangeVolume( 1, 0.1 )
 			else
-				self.LoopSound = CreateSound( self.Owner, Sound( "weapons/gblaster/thecrier.mp3" ) )
+				self.LoopSound = CreateSound( self.Owner, Sound( "weapons/gblaster/gabriel_holding.mp3" ) )
 				if ( self.LoopSound ) then self.LoopSound:Play() end
 			end
 			if ( self.BeatSound ) then self.BeatSound:ChangeVolume( 0, 0.1 ) end
@@ -784,7 +757,7 @@ function SWEP:PrimaryAttack()
 		if ( self.LoopSound ) then
 			self.LoopSound:ChangeVolume( 1, 0.1 )
 		else
-			self.LoopSound = CreateSound( self.Owner, Sound( "weapons/gblaster/thecrier.mp3" ) )
+			self.LoopSound = CreateSound( self.Owner, Sound( "weapons/gblaster/gabriel_firing.mp3" ) )
 			if ( self.LoopSound ) then self.LoopSound:Play() end
 		end
 		if ( self.BeatSound ) then self.BeatSound:ChangeVolume( 0, 0.1 ) end
@@ -800,7 +773,7 @@ function SWEP:PrimaryAttack()
 		bullet.Force = self.Primary.Force
 		bullet.Damage = self.Primary.Damage
 		bullet.AmmoType = self.Primary.Ammo
-		bullet.TracerName = "trueseeker_ray"
+		bullet.TracerName = "gabriel_ray"
 		bullet.Callback = function(attacker, trace, dmginfo)
 						local g = math.random( 1, 3 )
 						if ( g == 1 ) then
