@@ -13,7 +13,7 @@ SWEP.WepSelectIcon        = surface.GetTextureID("vgui/entities/weapon_scary_gar
 end
 
 SWEP.Category            = "Journey of the Damned"
-SWEP.PrintName            = "Fraudulence - Valley of Fools"
+SWEP.PrintName            = "Treachery - Goodbye"
 SWEP.Slot            = 3
 SWEP.SlotPos            = 4
 SWEP.DrawAmmo            = true
@@ -614,7 +614,7 @@ function SWEP:Deploy()
 	self:SetIronsights(false, self.Owner)  
 	self.Owner:SetFOV( 0, 0.5 )
 	
-	self.BeatSound = CreateSound( self.Owner, Sound( "weapons/gblaster/fraud_holding.mp3" ) )
+	self.BeatSound = CreateSound( self.Owner, Sound( "weapons/gblaster/treachery2_holding.mp3" ) )
 	if ( self.BeatSound ) then self.BeatSound:Play() end
    return true
 end
@@ -647,7 +647,7 @@ function SWEP:PrimaryAttack()
 		if ( self.LoopSound ) then
 			self.LoopSound:ChangeVolume( 1, 0.1 )
 		else
-			self.LoopSound = CreateSound( self.Owner, Sound("weapons/gblaster/fraud_firing.mp3") )
+			self.LoopSound = CreateSound( self.Owner, Sound("weapons/gblaster/treachery2_firing.mp3") )
 			if ( self.LoopSound ) then self.LoopSound:Play() end
 		end
 		if ( self.BeatSound ) then self.BeatSound:ChangeVolume( 0, 0.1 ) end
@@ -663,7 +663,7 @@ function SWEP:PrimaryAttack()
 		bullet.Force = self.Primary.Force
 		bullet.Damage = self.Primary.Damage
 		bullet.AmmoType = self.Primary.Ammo
-		bullet.TracerName = "fraud_ray"
+		bullet.TracerName = "treachery2_ray"
 		bullet.Callback = function(attacker, trace, dmginfo)
 						local g = math.random( 1, 3 )
 						if ( g == 1 ) then
