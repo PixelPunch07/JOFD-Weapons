@@ -26,8 +26,8 @@ SWEP.WorldModel = "models/weapons/w_physics.mdl"
 SWEP.ShowViewModel = true
 SWEP.ShowWorldModel = true
 
-SWEP.Purpose			= "Vaporize players with a ton of damage"
-SWEP.Instructions		= "M1 to shoot laser."
+SWEP.Purpose			= "bring total darkness"
+SWEP.Instructions		= "remove the light."
 SWEP.BounceWeaponIcon	= false 
 
 SWEP.UseHands = true
