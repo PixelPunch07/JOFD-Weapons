@@ -25,8 +25,8 @@ if SERVER then
 	SWEP.ShowViewModel = true
 	SWEP.ShowWorldModel = true
 	
-	SWEP.Purpose			= "Vaporize players with a ton of damage"
-	SWEP.Instructions		= "M1 to shoot laser."
+	SWEP.Purpose			= "Gate Open"
+	SWEP.Instructions		= "And Gate Close."
 	SWEP.BounceWeaponIcon	= false 
 	
 	SWEP.UseHands = true
@@ -36,14 +36,14 @@ if SERVER then
 	SWEP.AdminOnly          = true
 	SWEP.HoldType	  		= "physgun"
 	
-	SWEP.Primary.NumberofShots 	= 50
+	SWEP.Primary.NumberofShots 	= 25
 	SWEP.Primary.ClipSize		= 1
 	SWEP.Primary.DefaultClip	= 1
 	SWEP.Primary.Automatic		= true
-	SWEP.Primary.Delay		= 0.06
+	SWEP.Primary.Delay		= 0.08
 	SWEP.Primary.Ammo 		= "ar2"
 	SWEP.Primary.Force = 25000
-	SWEP.Primary.Damage = 76543
+	SWEP.Primary.Damage = 12000
 	SWEP.Primary.Spread = 0.6
 	SWEP.Primary.Recoil = 0.01
 	
@@ -623,7 +623,7 @@ if SERVER then
 			
 			-- Check if the player is holding a specific weapon (Replace "weapon_you_want" with the weapon's class name)
 			if IsValid(weapon) and weapon:GetClass() == "weapon_prison_realm_gblaster" then
-				local increaseFactor = 5 -- You can adjust this factor to increase or decrease the extra damage taken
+				local increaseFactor = 2 -- You can adjust this factor to increase or decrease the extra damage taken
 				
 				-- Increase the damage taken by the player
 				local newDamage = dmginfo:GetDamage() * increaseFactor
