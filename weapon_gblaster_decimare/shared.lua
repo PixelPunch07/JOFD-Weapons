@@ -14,7 +14,7 @@ SWEP.WepSelectIcon		= surface.GetTextureID("HUD/swepicons/weapon_gblaster/icon")
 end
 
 SWEP.Category			= "Journey of the Damned"
-SWEP.PrintName			= "DECIMARE"
+SWEP.PrintName			= "Mortem"
 SWEP.Slot			= 3
 SWEP.SlotPos			= 4
 SWEP.DrawAmmo			= true
@@ -26,8 +26,8 @@ SWEP.WorldModel = "models/weapons/w_physics.mdl"
 SWEP.ShowViewModel = true
 SWEP.ShowWorldModel = true
 
-SWEP.Purpose			= "Vaporize players with a ton of damage"
-SWEP.Instructions		= "M1 to shoot laser."
+SWEP.Purpose			= "Alas, death takes one more."
+SWEP.Instructions		= "You know what to do."
 SWEP.BounceWeaponIcon	= false 
 
 SWEP.UseHands = true
@@ -45,8 +45,8 @@ SWEP.Primary.Automatic		= true
 SWEP.Primary.Delay		= 0.08
 SWEP.Primary.Ammo 		= "ar2"
 SWEP.Primary.Force = 120000
-SWEP.Primary.Damage = 4000
-SWEP.Primary.Spread = 0.6
+SWEP.Primary.Damage = 4100
+SWEP.Primary.Spread = 0.75
 SWEP.Primary.Recoil = 0.01
 
 SWEP.Secondary.ScopeZoom	= 10
@@ -67,41 +67,10 @@ SWEP.RunSightsAng = Vector (-19.8471, -33.9181, 10)
 local IRONSIGHT_TIME = 0.4
 
 SWEP.VElements = {
-
-	["Wings"] = { type = "Model", model = "models/vindictus/wings/angel_wings.mdl", bone = "Base", rel = "", pos = Vector(-4.944, 1.46, -23.698), angle = Angle(90.658, -0.121, -90.056), size = Vector(0.043, 0.043, 0.043), color = Color(255, 0, 0, 255), surpresslightning = false, material = "models/props_combine/stasisfield_beam", skin = 0, bodygroup = {} },
-	["Wings+++++"] = { type = "Model", model = "models/vindictus/wings/angel_wings.mdl", bone = "Base", rel = "", pos = Vector(-4.944, 1.46, -23.698), angle = Angle(90.658, -0.121, -90.056), size = Vector(0.043, 0.043, 0.043), color = Color(255, 0, 0, 255), surpresslightning = false, material = "models/props_combine/stasisfield_beam", skin = 0, bodygroup = {} },
-	["Wings++++"] = { type = "Model", model = "models/vindictus/wings/angel_wings.mdl", bone = "Base", rel = "", pos = Vector(-4.944, 1.46, -23.698), angle = Angle(90.658, -0.121, -90.056), size = Vector(0.043, 0.043, 0.043), color = Color(255, 0, 0, 255), surpresslightning = false, material = "models/props_combine/stasisfield_beam", skin = 0, bodygroup = {} },
-	["Wings+++"] = { type = "Model", model = "models/vindictus/wings/angel_wings.mdl", bone = "Base", rel = "", pos = Vector(-4.944, 1.46, -23.698), angle = Angle(90.658, -0.121, -90.056), size = Vector(0.043, 0.043, 0.043), color = Color(255, 0, 0, 255), surpresslightning = false, material = "models/props_combine/stasisfield_beam", skin = 0, bodygroup = {} },
-	["Wings++"] = { type = "Model", model = "models/vindictus/wings/angel_wings.mdl", bone = "Base", rel = "", pos = Vector(-4.944, 1.46, -23.698), angle = Angle(90.658, -0.121, -90.056), size = Vector(0.043, 0.043, 0.043), color = Color(0, 0, 0, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["Gaster+++++++"] = { type = "Model", model = "models/jjgma_props/knife1.mdl", bone = "Base", rel = "", pos = Vector(6.282, -7.264, 17.747), angle = Angle(0.225, 127.897, -4.04), size = Vector(0.777, 0.777, 0.777), color = Color(255, 0, 0, 255), surpresslightning = false, material = "models/player/shared/ice_player", skin = 0, bodygroup = {} },
-	["Gaster"] = { type = "Model", model = "models/evangelos/undertale/gasterblaster.mdl", bone = "Base", rel = "", pos = Vector(0, -2.991, 10.357), angle = Angle(90, 0, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 0, 0, 255), surpresslightning = false, material = "models/props_combine/stasisfield_beam", skin = 0, bodygroup = {} },
-	["Gaster+++++"] = { type = "Model", model = "models/weapons/w_models/w_rocket_airstrike/w_rocket_airstrike.mdl", bone = "Base", rel = "", pos = Vector(-11.193, -11.393, -16.129), angle = Angle(90.817, -43.526, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 0, 0, 255), surpresslightning = false, material = "models/props_combine/stasisfield_beam", skin = 0, bodygroup = {} },
-	["Gaster+++"] = { type = "Model", model = "models/weapons/w_models/w_rocket_airstrike/w_rocket_airstrike.mdl", bone = "Base", rel = "", pos = Vector(-11.193, -11.393, -16.129), angle = Angle(90.817, -43.526, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 0, 0, 255), surpresslightning = false, material = "models/player/shared/ice_player", skin = 0, bodygroup = {} },
-	["Gaster++++++"] = { type = "Model", model = "models/jjgma_props/knife1.mdl", bone = "Base", rel = "", pos = Vector(6.282, -7.264, 17.747), angle = Angle(0.225, 127.897, -4.04), size = Vector(0.777, 0.777, 0.777), color = Color(255, 0, 0, 255), surpresslightning = false, material = "models/props_combine/stasisfield_beam", skin = 0, bodygroup = {} },
-	["Laser"] = { type = "Model", model = "models/props_questionableethics/qe_primarylase5.mdl", bone = "Base", rel = "", pos = Vector(-0.917, 18.593, 0.615), angle = Angle(-90, 90, 0), size = Vector(0.2, 0.2, 0.2), color = Color(255, 0, 0, 255), surpresslightning = false, material = "models/props_combine/stasisfield_beam", skin = 0, bodygroup = {} },
-	["Console++"] = { type = "Model", model = "models/props_lab/console02c.mdl", bone = "Base", rel = "", pos = Vector(-2.922, 1.46, -17.49), angle = Angle(0, 0, -90), size = Vector(0.18, 0.18, 0.18), color = Color(255, 0, 0, 255), surpresslightning = false, material = "models/props_combine/stasisfield_beam", skin = 0, bodygroup = {} },
-	["Console+"] = { type = "Model", model = "models/props_lab/console02c.mdl", bone = "Base", rel = "", pos = Vector(-2.922, 1.46, -17.49), angle = Angle(0, 0, -90), size = Vector(0.18, 0.18, 0.18), color = Color(255, 0, 0, 255), surpresslightning = false, material = "models/player/shared/ice_player", skin = 0, bodygroup = {} },
-	["Gaster++++"] = { type = "Model", model = "models/weapons/w_models/w_rocket_airstrike/w_rocket_airstrike.mdl", bone = "Base", rel = "", pos = Vector(-11.193, -11.393, -16.129), angle = Angle(90.817, -43.526, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 0, 0, 255), surpresslightning = false, material = "models/props_combine/stasisfield_beam", skin = 0, bodygroup = {} },
-	["Console"] = { type = "Model", model = "models/props_lab/console02c.mdl", bone = "Base", rel = "", pos = Vector(-2.922, 1.46, -17.49), angle = Angle(0, 0, -90), size = Vector(0.18, 0.18, 0.18), color = Color(255, 0, 0, 255), surpresslightning = false, material = "models/props_combine/stasisfield_beam", skin = 0, bodygroup = {} },
-	["Laser"] = { type = "Model", model = "models/props_xen/c4a1a/intro_shockwave.mdl", bone = "ValveBiped.Bip01_Spine4", rel = "", pos = Vector(7.791, -30.65, -4.676), angle = Angle(-90.362, 180, -80.074), size = Vector(0.2, 0.237, 10), color = Color(255, 0, 0, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["Gaster+"] = { type = "Model", model = "models/evangelos/undertale/gasterblaster.mdl", bone = "Base", rel = "", pos = Vector(0, -2.991, 10.357), angle = Angle(90, 0, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 0, 0, 255), surpresslightning = false, material = "models/player/shared/ice_player", skin = 0, bodygroup = {} },
-	["Laser+"] = { type = "Model", model = "models/props_questionableethics/qe_primarylase5.mdl", bone = "Base", rel = "", pos = Vector(-0.917, 18.593, 0.615), angle = Angle(-90, 90, 0), size = Vector(0.2, 0.2, 0.2), color = Color(255, 0, 0, 255), surpresslightning = false, material = "models/player/shared/ice_player", skin = 0, bodygroup = {} },
-	["Gaster++"] = { type = "Model", model = "models/weapons/w_models/w_rocket_airstrike/w_rocket_airstrike.mdl", bone = "Base", rel = "", pos = Vector(-11.193, -11.393, -16.129), angle = Angle(90.817, -43.526, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 0, 0, 255), surpresslightning = false, material = "models/props_combine/stasisfield_beam", skin = 0, bodygroup = {} }
 }
 
-SWEP.WElements = {
-	["console"] = { type = "Model", model = "models/props_lab/console02c.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(5.872, -0.667, -7.375), angle = Angle(-158.491, 98.208, -4.664), size = Vector(0.123, 0.123, 0.123), color = Color(255, 0, 0, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/props_combine/stasisfield_beam", skin = 0, bodygroup = {} },
-	["console+"] = { type = "Model", model = "models/props_lab/console02c.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(5.872, -0.667, -7.375), angle = Angle(-158.491, 98.208, -4.664), size = Vector(0.123, 0.123, 0.123), color = Color(255, 0, 0, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/player/shared/ice_player", skin = 0, bodygroup = {} },
-	["console++"] = { type = "Model", model = "models/weapons/w_models/w_rocket_airstrike/w_rocket_airstrike.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(11.156, -4.38, -12.869), angle = Angle(177.465, -172.605, 21.893), size = Vector(0.403, 0.403, 0.403), color = Color(255, 0, 0, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/props_combine/stasisfield_beam", skin = 0, bodygroup = {} },
-	["console+++"] = { type = "Model", model = "models/weapons/w_models/w_rocket_airstrike/w_rocket_airstrike.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(11.156, -4.38, -12.869), angle = Angle(177.465, -172.605, 21.893), size = Vector(0.403, 0.403, 0.403), color = Color(255, 0, 0, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/player/shared/ice_player", skin = 0, bodygroup = {} },
-	["console++++"] = { type = "Model", model = "models/props_lab/console02c.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(5.872, -0.667, -7.375), angle = Angle(-158.491, 98.208, -4.664), size = Vector(0.123, 0.123, 0.123), color = Color(255, 0, 0, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/props_combine/stasisfield_beam", skin = 0, bodygroup = {} },
-	["gaster"] = { type = "Model", model = "models/evangelos/undertale/gasterblaster.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(26.541, -5.684, -9.4), angle = Angle(-30, 21.666, -157.198), size = Vector(0.5, 0.5, 0.5), color = Color(255, 0, 0, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/props_combine/stasisfield_beam", skin = 0, bodygroup = {} },
-	["gaster+"] = { type = "Model", model = "models/evangelos/undertale/gasterblaster.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(26.541, -5.684, -9.4), angle = Angle(-30, 21.666, -157.198), size = Vector(0.5, 0.5, 0.5), color = Color(255, 0, 0, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/player/shared/ice_player", skin = 0, bodygroup = {} },
-	["gaster++"] = { type = "Model", model = "models/evangelos/undertale/gasterblaster.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(26.541, -5.684, -9.4), angle = Angle(-30, 21.666, -157.198), size = Vector(0.5, 0.5, 0.5), color = Color(255, 0, 0, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/props_combine/stasisfield_beam", skin = 0, bodygroup = {} },
-	["laser"] = { type = "Model", model = "models/props_questionableethics/qe_primarylase5.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(16.913, -0.159, 1.699), angle = Angle(175.675, 11.01, -21.651), size = Vector(0.116, 0.116, 0.116), color = Color(255, 0, 0, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/props_combine/stasisfield_beam", skin = 0, bodygroup = {} },
-	["laser++"] = { type = "Model", model = "models/props_questionableethics/qe_primarylase5.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(16.913, -0.159, 1.699), angle = Angle(175.675, 11.01, -21.651), size = Vector(0.116, 0.116, 0.116), color = Color(255, 0, 0, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/player/shared/ice_player", skin = 0, bodygroup = {} },
-	["laser+++"] = { type = "Model", model = "models/props_questionableethics/qe_primarylase5.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(16.913, -0.159, 1.699), angle = Angle(175.675, 11.01, -21.651), size = Vector(0.116, 0.116, 0.116), color = Color(255, 0, 0, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/props_combine/stasisfield_beam", skin = 0, bodygroup = {} }
-	}
+SWEL.WElements = {
+}
 function SWEP:Initialize()
 
 	self:SetHoldType(self.HoldType)
@@ -744,7 +713,7 @@ function SWEP:PrimaryAttack()
 
 							ent:SetAngles( ( v:GetPos() - pos ):Angle() )
 							ent:SetPos( self.Owner:GetPos() )
-							ent:EmitSound( Sound( "gaster/summer_holding.wav" ), 75, 100, 1, CHAN_AUTO )
+							ent:EmitSound( Sound( "gaster/.wav" ), 75, 100, 1, CHAN_AUTO )
 							ent:SetOwner( self.Owner )
 							ent:Spawn()
 							ent:SetVar( "position", pos )
@@ -776,7 +745,7 @@ function SWEP:PrimaryAttack()
 			if ( self.LoopSound ) then
 				self.LoopSound:ChangeVolume( 1, 0.1 )
 			else
-				self.LoopSound = CreateSound( self.Owner, Sound( "weapons/gblaster2/DECIMARE_holding.mp3" ) )
+				self.LoopSound = CreateSound( self.Owner, Sound( "weapons/gblaster2/mortem_holding.mp3" ) )
 				if ( self.LoopSound ) then self.LoopSound:Play() end
 			end
 			if ( self.BeatSound ) then self.BeatSound:ChangeVolume( 0, 0.1 ) end
@@ -790,7 +759,7 @@ function SWEP:PrimaryAttack()
 		if ( self.LoopSound ) then
 			self.LoopSound:ChangeVolume( 1, 0.1 )
 		else
-			self.LoopSound = CreateSound( self.Owner, Sound( "weapons/gblaster2/DECIMARE_firing.mp3" ) )
+			self.LoopSound = CreateSound( self.Owner, Sound( "weapons/gblaster2/mortem_firing.mp3" ) )
 			if ( self.LoopSound ) then self.LoopSound:Play() end
 		end
 		if ( self.BeatSound ) then self.BeatSound:ChangeVolume( 0, 0.1 ) end
@@ -806,7 +775,7 @@ function SWEP:PrimaryAttack()
 		bullet.Force = self.Primary.Force
 		bullet.Damage = self.Primary.Damage
 		bullet.AmmoType = self.Primary.Ammo
-		bullet.TracerName = "theone_ray"
+		bullet.TracerName = "mortem_ray"
 		bullet.Callback = function(attacker, trace, dmginfo)
 						local g = math.random( 1, 3 )
 						if ( g == 1 ) then
