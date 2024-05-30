@@ -27,7 +27,7 @@ SWEP.ShowViewModel = true
 SWEP.ShowWorldModel = true
 
 SWEP.Purpose			= "..."
-SWEP.Instructions		= "your fate is gone spread your pain."
+SWEP.Instructions		= "your fate has left you long ago do the same to the rest."
 SWEP.BounceWeaponIcon	= false 
 SWEP.UseHands = true
 SWEP.ViewModelBoneMods = {}
