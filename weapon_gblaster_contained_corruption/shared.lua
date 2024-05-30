@@ -820,7 +820,7 @@ function SWEP:Holster()
 			self:ResetBonePositions(vm)
 			self.Owner:SetFOV( 0, 0.25 )
 		end
-		self.Owner:EmitSound(Sound("weapons/gauz_draw2/holster.mp3"))
+		self.Owner:EmitSound(Sound("weapons/gblaster/worshipme.mp3"))
 	end
 	return true
 end
