@@ -27,7 +27,7 @@ SWEP.ShowViewModel = true
 SWEP.ShowWorldModel = true
 
 SWEP.Purpose			= "..."
-SWEP.Instructions		= "HELL IS DEAD. BLOOD HAS RAN DRY. THERE IS NOTHING LEFT."
+SWEP.Instructions		= "your fate is gone spread your pain."
 SWEP.BounceWeaponIcon	= false 
 SWEP.UseHands = true
 SWEP.ViewModelBoneMods = {}
