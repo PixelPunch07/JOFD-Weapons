@@ -38,14 +38,14 @@ SWEP.AdminSpawnable		= true
 SWEP.AdminOnly          = true
 SWEP.HoldType	  		= "physgun"
 
-SWEP.Primary.NumberofShots 	= 25
+SWEP.Primary.NumberofShots 	= 30
 SWEP.Primary.ClipSize		= 1
 SWEP.Primary.DefaultClip	= 1
 SWEP.Primary.Automatic		= true
-SWEP.Primary.Delay		= 0.08
+SWEP.Primary.Delay		= 0.09
 SWEP.Primary.Ammo 		= "ar2"
 SWEP.Primary.Force = 2400
-SWEP.Primary.Damage = 11050
+SWEP.Primary.Damage = 10000
 SWEP.Primary.Spread = 1
 SWEP.Primary.Recoil = 0.01
 
