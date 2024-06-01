@@ -51,50 +51,10 @@ SWEP.Primary.Automatic		= false
 SWEP.Primary.Delay		= 2
 SWEP.Primary.Ammo 		= "ar2"
 SWEP.Primary.Force = -300
-SWEP.Primary.Damage = 5555
+SWEP.Primary.Damage = 350000
 SWEP.Primary.Spread = 0.9
 SWEP.Primary.Recoil = 0
-SWEP.AzbrAltAmmos = true
-
-SWEP.Ammos = {
-	{
-		name = "Conventional Buckshot",
-		ishitscan = true ,
-		iconcolor = Color(255,200,0),
-		vmcolor = Color(255,255,0,255),
- 		pellets = 8,
- 		damage = 8,
- 		force = 1.25,
- 		spread = Vector(0.035,0.035,0), 
- 		effflag = 4,
- 		children = 0,
-	},
-
-	{
-		name = "Plasma Buckshot",
-		ishitscan = true,
-		iconcolor = Color(0,255,0),
-		skin = 0,
-		pellets = 1,
-		damage = 70,
-		damagedeviation = 5,
-		force = 4,
-		spread = Vector(0.005, 0.005, 0),
-		tracer = "none",
-		effflag = 21,
-		children = 1,
-		shell = 22,
-	},
-
-	{
-		name = "Explosive BuckShot",
-		ishitscan = false,
-		iconcolor = Color(255,0,0),
-		vmcolor = Color(255,0,0,255),
-		skin = 1,
-		payload = "B3LCHXRocket"
-	}
-}
+SWEP.Buckshotted = true
 
 SWEP.Secondary.ScopeZoom	= 10
 SWEP.Secondary.Automatic	= false
@@ -114,10 +74,20 @@ SWEP.RunSightsAng = Vector (-19.8471, -33.9181, 10)
 hook.Add("PlayerSpawn", "buckshot_loading", function(ply)-- tha valueess
     if IsValid(ply) then
 	ply:SetNWBool("dumbass", false) 
+	ply:SetNWBool("mandebounce", false) 
     ply:SetNWBool("justloaded", false) 
+	ply:SetNWBool("buckshotvgui", false) 
+	ply:SetNWBool("firstload", true) 
 	ply:SetNWInt("blanks", 0) 
-	ply:SetNWInt("lives", 0) 	
-
+	ply:SetNWInt("lives", 0)	
+	ply:SetNWInt("handcuff", 0) 
+	ply:SetNWInt("expired", 0) 	
+	ply:SetNWInt("handsaw", 0) 
+	ply:SetNWInt("magglass", 0) 	
+	ply:SetNWInt("currentlytelling", false) 
+	ply:SetNWInt("sawnoff", 1) 
+	ply:SetNWString("currentround", "Blank")
+	ply:SetNWEntity( "lastattacker", nil )
 	  
     end
 end)
@@ -144,7 +114,8 @@ function SWEP:Initialize()
 	self.Blanks = 0
 self.Lives = 0
 self.Total = 0
-	
+self.totalitems = 0	
+self.selectedig = 0	
 	self.CandoSpecial = false
 	if !file.Exists("autorun/qe_weaponry_version_notify.lua","LUA") then self:Remove() end -- uh how about no.
 	if CLIENT then
@@ -685,7 +656,7 @@ function SWEP:Deploy()
 	self.Owner:EmitSound(Sound("weapons/gblaster/gblaster_ready.mp3"))
 	self:SetIronsights(false, self.Owner)  
    	self.Owner:SetFOV( 0, 0.5 )
-	self.Owner:SetNWInt("coffee", 0) 
+	self.Owner.usingbuckshot = true
 	
 	self.BeatSound = CreateSound( self.Owner, Sound( "weapons/gblaster/buckshotrelease.mp3" ) )
 	if ( self.BeatSound ) then self.BeatSound:Play() end
@@ -696,8 +667,39 @@ end
 function SWEP:Reload()
 if self.Lives <= 0 then 
 if SERVER then
+
+local decideround = math.random(1,2)
+if decideround == 2 then
+self.Owner:SetNWString("currentround", "Live")
+self.selectedig = 2	
+elseif decideround == 1 then
+self.Owner:SetNWString("currentround", "Blank")
+self.selectedig = 1	
+end
+
+if self.Owner:GetNWBool("firstload") == false and self.totalitems < 8 then
+for i=1,2 do 
+local decideitem = math.random(1,4)
+if decideitem == 1 then
+self.Owner:SetNWInt("handcuff", self.Owner:GetNWInt("handcuff") +1 ) 
+self.totalitems = self.totalitems +1
+elseif decideitem == 2 then
+self.Owner:SetNWInt("expired", self.Owner:GetNWInt("expired") +1 ) 
+self.totalitems = self.totalitems +1
+elseif decideitem == 3 then
+self.Owner:SetNWInt("handsaw", self.Owner:GetNWInt("handsaw") +1 ) 
+self.totalitems = self.totalitems +1
+elseif decideitem == 4 then
+self.Owner:SetNWInt("magglass", self.Owner:GetNWInt("magglass") +1 ) 
+self.totalitems = self.totalitems +1
+
+end
+end 
+end
+
 timer.Create( "loljustnow"..self:EntIndex(), 2, 1, function() self.Owner:SetNWBool("justloaded", true) end )	
 timer.Create( "lolloadded"..self:EntIndex(), 6, 1, function() self.Owner:SetNWBool("justloaded", false) end )	
+self.Owner:SetNWBool("firstload", false) 
 for i=1,8 do 
 local which = math.random(1,2)
 if which == 1 and self.Total <= 7 then
@@ -715,6 +717,18 @@ end
 end
 
 function SWEP:Think()
+if self.Owner:GetNWInt("sawnoff") == 1 then
+self.VElements["shotgun"].bodygroup = {[1] = 0}  
+self.WElements["shotgun"].bodygroup = {[1] = 0}
+self.VElements["blaster"].pos = Vector(12.095, 5.277, 8.666)
+self.WElements["blaster"].pos = Vector(36.724, 0.695, -4.511)
+elseif self.Owner:GetNWInt("sawnoff") == 2 then
+self.VElements["shotgun"].bodygroup = {[1] = 1} 
+self.WElements["shotgun"].bodygroup = {[1] = 1} 
+self.VElements["blaster"].pos = Vector(5.9, 5.277, 3.666)
+self.WElements["blaster"].pos = Vector(28.724, 0.695, -4.511)
+end
+
 	if ( self.Owner:IsPlayer() && ( self.Owner:KeyReleased( IN_ATTACK ) || !self.Owner:KeyDown( IN_ATTACK ) ) ) then
 		if ( self.LoopSound ) then self.LoopSound:ChangeVolume( 0, 0.1 ) end
 		if ( self.LoopSound2 ) then self.LoopSound2:ChangeVolume( 0, 0.1 ) end
@@ -731,7 +745,7 @@ function SWEP:PrimaryAttack()
 
 if SERVER and self.Owner:GetNWBool("justloaded") == false then
 	print(self.Total)
- local random = math.random(1,2)
+ local random = self.selectedig
  if random == 2 and self.Lives >= 1 and self.Total > 0 then
  self.Weapon:SendWeaponAnim(ACT_SHOTGUN_PUMP)	
 util.ScreenShake(self:GetPos(),16,236,4*self:GetModelScale(),999*self:GetModelScale())
@@ -743,7 +757,7 @@ util.ScreenShake(self:GetPos(),16,236,4*self:GetModelScale(),999*self:GetModelSc
 	bullet.Spread = Vector( self.Primary.Spread * 0.1 , self.Primary.Spread * 0.1, 0)
 	bullet.Tracer = 1
 	bullet.Force = self.Primary.Force
-	bullet.Damage = self.Primary.Damage
+	bullet.Damage = self.Primary.Damage * self.Owner:GetNWInt("sawnoff")
 	bullet.AmmoType = self.Primary.Ammo
 	bullet.TracerName = "bullet_ray"
 	bullet.Callback = function(attacker, trace, dmginfo)
@@ -797,7 +811,7 @@ self.Weapon:SendWeaponAnim(ACT_SHOTGUN_PUMP)
 	bullet.Spread = Vector( self.Primary.Spread * 0.1 , self.Primary.Spread * 0.1, 0)
 	bullet.Tracer = 1
 	bullet.Force = self.Primary.Force
-	bullet.Damage = self.Primary.Damage
+	bullet.Damage = self.Primary.Damage * self.Owner:GetNWInt("sawnoff")
 	bullet.AmmoType = self.Primary.Ammo
 	bullet.TracerName = "bullet_ray"
 	bullet.Callback = function(attacker, trace, dmginfo)
@@ -825,7 +839,22 @@ self.Weapon:SendWeaponAnim(ACT_SHOTGUN_PUMP)
 	
 	end
 end
-	
+ self.Owner:SetNWInt("sawnoff", 1) 	
+local decideround = math.random(1,2)
+if decideround == 2 and self.Lives >= 1 then
+self.Owner:SetNWString("currentround", "Live")
+self.selectedig = 2	
+elseif decideround == 1 and self.Blanks >= 1 then
+self.Owner:SetNWString("currentround", "Blank")
+self.selectedig = 1	
+elseif decideround == 2 and self.Lives <= 0 then
+self.Owner:SetNWString("currentround", "Blank")
+self.selectedig = 1	
+elseif decideround == 1 and self.Blanks <= 0 then
+self.Owner:SetNWString("currentround", "Live")
+self.selectedig = 2	
+end
+
 
 end
 
@@ -838,7 +867,7 @@ if SERVER then
 self.Owner:SetNWBool("dumbass", true) 
 timer.Create( "dumbfuck"..self:EntIndex(), 6, 1, function() self.Owner:SetNWBool("dumbass", false) end )	
  print("rand2live1")
- self.Owner:TakeDamage(self.Owner:GetMaxHealth() * 0.2)
+ self.Owner:TakeDamage(self.Owner:GetMaxHealth() * 0.2 * self.Owner:GetNWInt("sawnoff"))
 	self:SetNextPrimaryFire( CurTime() + self.Primary.Delay +2)
 	self:SetNextSecondaryFire( CurTime() + self.Primary.Delay +2 ) 
 	self.Lives = self.Lives -1
@@ -850,22 +879,22 @@ timer.Create( "dumbfuck"..self:EntIndex(), 6, 1, function() self.Owner:SetNWBool
     self.Total = self.Total -1
 			self.Owner:SetNWInt("blanks", self.Owner:GetNWInt("Blanks") -1)
 		self.Owner:EmitSound(Sound("Weapon_Shotgun.Empty"))
-		self:SetNextPrimaryFire( CurTime() + self.Primary.Delay -3 )
-		self:SetNextSecondaryFire( CurTime() + self.Primary.Delay -3 ) 
+		self:SetNextPrimaryFire( CurTime() + self.Primary.Delay -1.8 )
+		self:SetNextSecondaryFire( CurTime() + self.Primary.Delay -1.8 ) 
 	elseif random == 2 and self.Lives <= 0 and self.Total >= 0 then
     print("rand2nolives")
 	self.Blanks = self.Blanks -1
     self.Total = self.Total -1
 			self.Owner:SetNWInt("blanks", self.Owner:GetNWInt("Blanks") -1)
 	self.Owner:EmitSound(Sound("Weapon_Shotgun.Empty"))
-		self:SetNextPrimaryFire( CurTime() + self.Primary.Delay -3 )
-		self:SetNextSecondaryFire( CurTime() + self.Primary.Delay -3 ) 
+		self:SetNextPrimaryFire( CurTime() + self.Primary.Delay -1.8 )
+		self:SetNextSecondaryFire( CurTime() + self.Primary.Delay -1.8 ) 
 	elseif random == 1 and self.Blanks <= 0 and self.Total >= 0 then
 	self.Owner:EmitSound(Sound("weapons/gblaster/buckshot_shoot.mp3"))
 		self.Owner:SetNWBool("dumbass", true) 
 		timer.Create( "dumbfuck"..self:EntIndex(), 6, 1, function() self.Owner:SetNWBool("dumbass", false) end )	
 	 print("rand1noblanks")
-		 self.Owner:TakeDamage(self.Owner:GetMaxHealth() * 0.2)
+		 self.Owner:TakeDamage(self.Owner:GetMaxHealth() * 0.2 * self.Owner:GetNWInt("sawnoff"))
 	self:SetNextPrimaryFire( CurTime() + self.Primary.Delay +2 )
 	self:SetNextSecondaryFire( CurTime() + self.Primary.Delay +2 ) 
 	self.Lives = self.Lives -1
@@ -874,7 +903,25 @@ timer.Create( "dumbfuck"..self:EntIndex(), 6, 1, function() self.Owner:SetNWBool
 	
 	end
 	end
+	 self.Owner:SetNWInt("sawnoff", 1) 
+	local decideround = math.random(1,2)
+if decideround == 2 and self.Lives >= 1 then
+self.Owner:SetNWString("currentround", "Live")
+self.selectedig = 2	
+elseif decideround == 1 and self.Blanks >= 1 then
+self.Owner:SetNWString("currentround", "Blank")
+self.selectedig = 1	
+elseif decideround == 2 and self.Lives <= 0 then
+self.Owner:SetNWString("currentround", "Blank")
+self.selectedig = 1	
+elseif decideround == 1 and self.Blanks <= 0 then
+self.Owner:SetNWString("currentround", "Live")
+self.selectedig = 2	
 end
+
+end
+
+
 function SWEP:KillSounds()
 	if ( self.BeatSound ) then self.BeatSound:Stop() self.BeatSound = nil end
 	if ( self.LoopSound ) then self.LoopSound:Stop() self.LoopSound = nil end
@@ -890,7 +937,6 @@ function SWEP:Holster()
 			self.Owner:SetFOV( 0, 0.25 )
 		end
 		self.Owner:EmitSound(Sound("weapons/gauz_draw2/holster.mp3"))
-		self.Owner:SetNWInt("coffee", 0) 
 	end
 	return true
 end
@@ -1045,8 +1091,73 @@ local lives = tostring(ply:GetNWInt("lives"))
 	draw.SimpleText(text, "HudDefault", ScrW() * 0.47, ScrH() * 0.69, Color( 255, 255, 255, 255 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
 end
 
+if ply:GetNWInt("currentlytelling") == true then
+local blanks = tostring(ply:GetNWString("currentround"))
+
+    local text = "Current Round: " .. blanks .. ""
+
+draw.SimpleText(text, "HudDefault", ScrW() * 0.45, ScrH() * 0.69, Color( 255, 255, 255, 255 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+end
+
+if ply:KeyPressed(IN_USE) and ply:GetNWBool("buckshotvgui") == false and ply:GetNWBool("mandebounce") == false then
+self.Owner:SetNWBool("mandebounce", true) 
+timer.Create( "guidebounce"..self:EntIndex(), 0.3, 1, function() self.Owner:SetNWBool("mandebounce", false) end )
+ply:SetNWBool("buckshotvgui", true) 
+end
+
+if ply:KeyPressed(IN_USE) and ply:GetNWBool("buckshotvgui") == true and ply:GetNWBool("mandebounce") == false then
+ply:SetNWBool("buckshotvgui", false) 
+self.Owner:SetNWBool("mandebounce", true) 
+timer.Create( "guidebounce"..self:EntIndex(), 0.3, 1, function() self.Owner:SetNWBool("mandebounce", false) end )
+end
+
+    if ply:GetNWBool("buckshotvgui") == false then
+	draw.SimpleText("E To open menu", "HudDefault", ScrW() * 0.02, ScrH() * 0.8, Color( 255, 255, 255, 255 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+	local Texture1 = Material("vgui/gradient-l") 
+surface.SetMaterial(Texture1)
+surface.SetDrawColor(Color(25, 25, 25, 155))
+surface.DrawTexturedRectRotated( ScrW()-1800, ScrH()-215, 255, 50, 180 )
+	end
+	
+	if ply:GetNWBool("buckshotvgui") == true then
+	draw.SimpleText("Hand Saw", "HudDefault", ScrW() * 0.005, ScrH() * 0.79, Color( 255, 255, 255, 255 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+	draw.SimpleText("2x Damage next shot. Clears after shot", "HudDefault", ScrW() * 0.008, ScrH() * 0.81, Color( 255, 255, 255, 255 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+	draw.SimpleText(self.Owner:GetNWInt("handsaw"), "HudDefault", ScrW() * 0.21, ScrH() * 0.81, Color( 255, 255, 255, 255 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+	local Texture1 = Material("vgui/gradient-l") 
+surface.SetMaterial(Texture1)
+surface.SetDrawColor(Color(25, 25, 25, 155))
+surface.DrawTexturedRectRotated( ScrW()-1750, ScrH()-210, 455, 70, 180 )
+
+	draw.SimpleText("Expired Medicine", "HudDefault", ScrW() * 0.005, ScrH() * 0.86, Color( 255, 255, 255, 255 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+	draw.SimpleText("50% chance to take 7% of HP or heal 12% of HP.", "HudDefault", ScrW() * 0.008, ScrH() * 0.88, Color( 255, 255, 255, 255 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+	draw.SimpleText(self.Owner:GetNWInt("expired"), "HudDefault", ScrW() * 0.26, ScrH() * 0.88, Color( 255, 255, 255, 255 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+	local Texture1 = Material("vgui/gradient-l") 
+surface.SetMaterial(Texture1)
+surface.SetDrawColor(Color(25, 25, 25, 155))
+surface.DrawTexturedRectRotated( ScrW()-1750, ScrH()-135, 650, 70, 180 )
+
+	draw.SimpleText("Magnifying Glass", "HudDefault", ScrW() * 0.005, ScrH() * 0.72, Color( 255, 255, 255, 255 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+	draw.SimpleText("Allows you to see the current round", "HudDefault", ScrW() * 0.008, ScrH() * 0.74, Color( 255, 255, 255, 255 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+	draw.SimpleText(self.Owner:GetNWInt("magglass"), "HudDefault", ScrW() * 0.21, ScrH() * 0.74, Color( 255, 255, 255, 255 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+	local Texture1 = Material("vgui/gradient-l") 
+surface.SetMaterial(Texture1)
+surface.SetDrawColor(Color(25, 25, 25, 155))
+surface.DrawTexturedRectRotated( ScrW()-1750, ScrH()-285, 455, 70, 180 )
+
+	draw.SimpleText("Handcuffs", "HudDefault", ScrW() * 0.005, ScrH() * 0.65, Color( 255, 255, 255, 255 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+	draw.SimpleText("Stuns the person who last hit you for 4 seconds", "HudDefault", ScrW() * 0.008, ScrH() * 0.67, Color( 255, 255, 255, 255 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+	draw.SimpleText(self.Owner:GetNWInt("handcuff"), "HudDefault", ScrW() * 0.26, ScrH() * 0.67, Color( 255, 255, 255, 255 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+	local Texture1 = Material("vgui/gradient-l") 
+surface.SetMaterial(Texture1)
+surface.SetDrawColor(Color(25, 25, 25, 155))
+surface.DrawTexturedRectRotated( ScrW()-1750, ScrH()-360, 655, 70, 180 )
+
+end
+
 
 end	
+
+
 	local Mat = Material( "blasters/buckshotbg" )
   Mat:SetFloat( "$pp_colour_brightness", 0)
     function SWEP:PrintWeaponInfo( x, y, alpha )
@@ -1073,5 +1184,3 @@ end
         self.InfoMarkup = nil
     end 
 	
-	
-	 
