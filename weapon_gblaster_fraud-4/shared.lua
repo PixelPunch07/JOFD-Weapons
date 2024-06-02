@@ -44,8 +44,8 @@ SWEP.Primary.DefaultClip	= 1
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Delay		= 0.06
 SWEP.Primary.Ammo 		= "ar2"
-SWEP.Primary.Force = 15000
-SWEP.Primary.Damage = 245555
+SWEP.Primary.Force = 12000
+SWEP.Primary.Damage = 245000
 SWEP.Primary.Spread = 0.05
 SWEP.Primary.Recoil = 0.01
 
