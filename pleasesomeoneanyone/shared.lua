@@ -66,26 +66,63 @@ SWEP.RunSightsAng = Vector (-19.8471, -33.9181, 10)
 
 local IRONSIGHT_TIME = 0.4
 
+SWEP.HoldType = "pistol"
+SWEP.ViewModelFOV = 99.317073170732
+SWEP.ViewModelFlip = false
+SWEP.ViewModel = "models/weapons/c_physcannon_def.mdl"
+SWEP.WorldModel = "models/weapons/w_pistol.mdl"
+SWEP.ShowViewModel = true
+SWEP.ShowWorldModel = true
+SWEP.ViewModelBoneMods = {}
+
+SWEP.SCKMaterials = {}
+
+SWEP.IronSightsPos = Vector(3.64, 0, -0.2)
+SWEP.IronSightsAng = Vector(0, 0, 0)
+
 SWEP.VElements = {
-	["Finger"] = { type = "Model", model = "models/gjujutsu/sukuna_finger/sukuna_finger.mdl", bone = "Base", rel = "", pos = Vector(0.576, -2.753, -18.828), angle = Angle(-96.812, 180, 84.151), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
-	["Finger+"] = { type = "Model", model = "models/gjujutsu/sukuna_finger/sukuna_finger.mdl", bone = "Base", rel = "", pos = Vector(-1.328, -2.753, -18.828), angle = Angle(-98.612, 180, 84.151), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
-	["Finger++"] = { type = "Model", model = "models/gjujutsu/sukuna_finger/sukuna_finger.mdl", bone = "Base", rel = "", pos = Vector(-2.848, -2.753, -18.988), angle = Angle(-98.612, 168.735, 70.236), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
-	["Finger+++"] = { type = "Model", model = "models/gjujutsu/sukuna_finger/sukuna_finger.mdl", bone = "Base", rel = "", pos = Vector(-2.081, -0.676, -18.988), angle = Angle(-98.612, -59.068, 70.236), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
-	["Finger++++"] = { type = "Model", model = "models/gjujutsu/sukuna_finger/sukuna_finger.mdl", bone = "Base", rel = "", pos = Vector(-0.491, -0.997, -18.988), angle = Angle(-98.612, -33.764, 70.236), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
-	["Finger+++++"] = { type = "Model", model = "models/gjujutsu/sukuna_finger/sukuna_finger.mdl", bone = "Base", rel = "", pos = Vector(1.029, -0.996, -18.988), angle = Angle(-98.612, -37.964, 70.236), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
-	["Fuga"] = { type = "Model", model = "models/gjujutsu/fire_arrow/fire_arrow.mdl", bone = "Base", rel = "", pos = Vector(-13.88, -6.444, -10.738), angle = Angle(93.739, -89.615, 3.046), size = Vector(1.044, 1.044, 1.044), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
-	["Gaster"] = { type = "Model", model = "models/evangelos/undertale/gasterblaster.mdl", bone = "Base", rel = "", pos = Vector(0, -2.991, 10.357), angle = Angle(90, 0, -90), size = Vector(0.536, 0.536, 0.536), color = Color(40, 40, 40, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/weapons/v_slam/new light1", skin = 0, bodygroup = {} },
-	["Laser"] = { type = "Model", model = "models/props_questionableethics/qe_primarylase5.mdl", bone = "Base", rel = "", pos = Vector(-0.917, 18.593, 0.616), angle = Angle(-90, 90, 0), size = Vector(0.2, 0.2, 0.2), color = Color(40, 40, 40, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/weapons/v_slam/new light1", skin = 0, bodygroup = {} },
-	["Shrine"] = { type = "Model", model = "models/chromeda/malevolent_shrine.mdl", bone = "Base", rel = "", pos = Vector(-0.474, -4.321, -10.738), angle = Angle(90, 0, -90), size = Vector(0.029, 0.029, 0.029), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
-	["Wheel"] = { type = "Model", model = "models/chromeda/wheel.mdl", bone = "Base", rel = "", pos = Vector(-0.88, -15.635, 10.357), angle = Angle(90, 0, -90), size = Vector(1.025, 1.025, 1.025), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} }
-	}
+	["A fucking door"] = { type = "Model", model = "models/props_c17/door01_left.mdl", bone = "Base", rel = "", pos = Vector(-53.066, -4.049, 79.803), angle = Angle(-90.349, 90, 0), size = Vector(0.148, 0.148, 0.148), color = Color(255, 255, 255, 254), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
+	["And his mattress"] = { type = "Model", model = "models/props_c17/FurnitureMattress001a.mdl", bone = "Base", rel = "", pos = Vector(-0.012, -6.02, -11.229), angle = Angle(-90.349, 90, 0), size = Vector(0.148, 0.148, 0.148), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
+	["And his mattress+"] = { type = "Model", model = "models/props_c17/shelfunit01a.mdl", bone = "Base", rel = "", pos = Vector(8.163, -5.567, -12.283), angle = Angle(-177.29601, 180, 89.816), size = Vector(0.045, 0.045, 0.045), color = Color(255, 255, 255, 252), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
+	["Broken bat"] = { type = "Model", model = "models/weapons/c_models/c_wooden_bat/c_wooden_bat.mdl", bone = "Base", rel = "", pos = Vector(1.975, -8.998, 3.597), angle = Angle(-6.08, 90.544, 89.179), size = Vector(0.148, 0.148, 0.148), color = Color(255, 255, 255, 254), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
+	["Console"] = { type = "Model", model = "models/props_lab/console02c.mdl", bone = "Base", rel = "", pos = Vector(-2.921, 1.46, -16.449), angle = Angle(0, 0, -90), size = Vector(0.18, 0.18, 0.18), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "GIYGAS/GIYGASFET", skin = 0, bodygroup = {} },
+	["Console+"] = { type = "Model", model = "models/props_lab/console02c.mdl", bone = "Base", rel = "", pos = Vector(-2.921, 1.46, -16.449), angle = Angle(0, 0, -90), size = Vector(0.18, 0.18, 0.18), color = Color(0, 0, 0, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/debug/debugwhite", skin = 0, bodygroup = {} },
+	["Console++"] = { type = "Model", model = "models/props_lab/console02c.mdl", bone = "Base", rel = "", pos = Vector(-2.921, 1.46, -16.449), angle = Angle(0, 0, -90), size = Vector(0.18, 0.18, 0.18), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "GIYGAS/GIYGASFET", skin = 0, bodygroup = {} },
+	["Console+++"] = { type = "Model", model = "models/props_lab/console02c.mdl", bone = "Base", rel = "", pos = Vector(-2.921, 1.46, -16.449), angle = Angle(0, 0, -90), size = Vector(0.18, 0.18, 0.18), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "GIYGAS/GIYGASFET", skin = 0, bodygroup = {} },
+	["Fetus+"] = { type = "Model", model = "models/props_c17/doll01.mdl", bone = "ValveBiped.Bip01_L_Hand", rel = "", pos = Vector(-13.987, -5.139, 10.579), angle = Angle(-177.93201, -5.191, -106.601), size = Vector(0.511, 0.511, 0.511), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "GIYGAS/GIYGASTRANSPARENT", skin = 0, bodygroup = {} },
+	["Fetus++"] = { type = "Model", model = "models/props_c17/doll01.mdl", bone = "ValveBiped.Bip01_L_Hand", rel = "", pos = Vector(-13.987, -5.139, 10.579), angle = Angle(-177.93201, -5.191, -106.601), size = Vector(0.511, 0.511, 0.511), color = Color(255, 255, 255, 136), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
+	["Gaster"] = { type = "Model", model = "models/evangelos/undertale/gasterblaster.mdl", bone = "Base", rel = "", pos = Vector(0, -2.991, 10.357), angle = Angle(90, 0, -90), size = Vector(0.536, 0.536, 0.536), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "GIYGAS/GIYGASFET", skin = 0, bodygroup = {} },
+	["Gaster+"] = { type = "Model", model = "models/evangelos/undertale/gasterblaster.mdl", bone = "Base", rel = "", pos = Vector(0, -2.991, 10.357), angle = Angle(90, 0, -90), size = Vector(0.536, 0.536, 0.536), color = Color(0, 0, 0, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/debug/debugwhite", skin = 0, bodygroup = {} },
+	["Gaster++"] = { type = "Model", model = "models/evangelos/undertale/gasterblaster.mdl", bone = "Base", rel = "", pos = Vector(0, -2.991, 10.357), angle = Angle(90, 0, -90), size = Vector(0.536, 0.536, 0.536), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "GIYGAS/GIYGASFET", skin = 0, bodygroup = {} },
+	["His bed"] = { type = "Model", model = "models/props_c17/FurnitureBed001a.mdl", bone = "Base", rel = "", pos = Vector(-0.012, -6.02, -11.229), angle = Angle(-90.349, 90, 0), size = Vector(0.148, 0.148, 0.148), color = Color(255, 255, 255, 254), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
+	["Keep the light on"] = { type = "Model", model = "models/props_interiors/Furniture_Lamp01a.mdl", bone = "Base", rel = "", pos = Vector(-11.299, -9.243, -9.145), angle = Angle(-91.251, 90, 0), size = Vector(0.046, 0.046, 0.046), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
+	["Laser"] = { type = "Model", model = "models/props_questionableethics/qe_primarylase5.mdl", bone = "Base", rel = "", pos = Vector(-0.917, 18.593, 0.616), angle = Angle(-90, 90, 0), size = Vector(0.2, 0.2, 0.2), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "GIYGAS/GIYGASFET", skin = 0, bodygroup = {} },
+	["Laser++"] = { type = "Model", model = "models/props_questionableethics/qe_primarylase5.mdl", bone = "Base", rel = "", pos = Vector(-0.917, 18.593, 0.616), angle = Angle(-90, 90, 0), size = Vector(0.2, 0.2, 0.2), color = Color(0, 0, 0, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/debug/debugwhite", skin = 0, bodygroup = {} },
+	["Laser+++++"] = { type = "Model", model = "models/props_questionableethics/qe_primarylase5.mdl", bone = "Base", rel = "", pos = Vector(-0.917, 18.593, 0.616), angle = Angle(-90, 90, 0), size = Vector(0.2, 0.2, 0.2), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "GIYGAS/GIYGASFET", skin = 0, bodygroup = {} },
+	["Ness?+"] = { type = "Model", model = "models/Humans/Group02/male_07.mdl", bone = "Base", rel = "", pos = Vector(-0.012, -6.513, -5.891), angle = Angle(0.045, 93.46, 179.77299), size = Vector(0.148, 0.148, 0.148), color = Color(255, 255, 255, 254), surpresslightning = false, bonemerge = false, highrender = false, material = "GIYGAS/GIYGAS4", skin = 0, bodygroup = {} },
+	["Table+"] = { type = "Model", model = "models/props_c17/FurnitureTable001a.mdl", bone = "Base", rel = "", pos = Vector(-0.917, -5.882, 0.616), angle = Angle(-90, 90, 0), size = Vector(0.2, 0.2, 0.2), color = Color(255, 255, 255, 254), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
+	["The Fountain"] = { type = "Model", model = "models/props_c17/fountain_01.mdl", bone = "Base", rel = "", pos = Vector(2.424, -4.916, -22.342), angle = Angle(-88.367, 180, 89.816), size = Vector(0.026, 0.026, 0.026), color = Color(255, 255, 255, 252), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
+	["The Fountain+"] = { type = "Model", model = "models/props_2fort/telephone001.mdl", bone = "Base", rel = "", pos = Vector(2.424, -6.94, -22.342), angle = Angle(-88.367, 180, 89.816), size = Vector(0.026, 0.026, 0.026), color = Color(255, 255, 255, 252), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
+	["Tubes of the past"] = { type = "Model", model = "models/xqm/Rails/twist_90_left.mdl", bone = "Base", rel = "", pos = Vector(0.874, -1.224, 10.357), angle = Angle(90, 0, -90), size = Vector(0.282, 0.282, 0.282), color = Color(138, 138, 138, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "GIYGAS/GORETUBE", skin = 0, bodygroup = {} },
+	["Tubes of the past+"] = { type = "Model", model = "models/xqm/Rails/twist_45_right.mdl", bone = "Base", rel = "", pos = Vector(-2.132, 4.1, -22.426), angle = Angle(85.337, 109.527, -90), size = Vector(0.282, 0.282, 0.282), color = Color(138, 138, 138, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "GIYGAS/GORETUBE", skin = 0, bodygroup = {} },
+	["Tubes of the past++"] = { type = "Model", model = "models/xqm/Rails/twist_45_right.mdl", bone = "Base", rel = "", pos = Vector(1.674, 3.86, -10.889), angle = Angle(94.743, 147.658, -90), size = Vector(0.282, 0.282, 0.282), color = Color(138, 138, 138, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "GIYGAS/GORETUBE", skin = 0, bodygroup = {} },
+	["Tubes of the past+++"] = { type = "Model", model = "models/xqm/Rails/straight_16.mdl", bone = "Base", rel = "", pos = Vector(3.737, 8.974, -8.761), angle = Angle(94.743, 147.658, -90), size = Vector(0.282, 0.282, 0.282), color = Color(138, 138, 138, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "GIYGAS/GORETUBE", skin = 0, bodygroup = {} },
+	["Tubes of the past++++"] = { type = "Model", model = "models/xqm/Rails/loop_left.mdl", bone = "ValveBiped.Bip01_L_Hand", rel = "", pos = Vector(2.777, -3.8, 2.509), angle = Angle(156.371, 156.438, -90), size = Vector(0.104, 0.104, 0.104), color = Color(138, 138, 138, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "GIYGAS/GORETUBE", skin = 0, bodygroup = {} },
+	["Tubes of the past+++++"] = { type = "Model", model = "models/xqm/Rails/twist_90_left.mdl", bone = "ValveBiped.Bip01_L_Hand", rel = "", pos = Vector(3.812, -3.215, -1.906), angle = Angle(143.45, 158.81799, -90), size = Vector(0.104, 0.104, 0.104), color = Color(133, 133, 133, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "GIYGAS/GORETUBE", skin = 0, bodygroup = {} },
+	["Tubes of the past++++++"] = { type = "Model", model = "models/xqm/Rails/twist_90_left.mdl", bone = "ValveBiped.Bip01_L_Hand", rel = "", pos = Vector(-6.213, -7.424, -8.605), angle = Angle(143.45, 158.81799, -53.162), size = Vector(0.104, 0.104, 0.104), color = Color(133, 133, 133, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "GIYGAS/GORETUBE", skin = 0, bodygroup = {} },
+	["Windows?"] = { type = "Model", model = "models/props_phx/construct/windows/window2x2.mdl", bone = "Base", rel = "", pos = Vector(-6.266, -11.137, -9.145), angle = Angle(-0.003, 90, 0), size = Vector(0.046, 0.046, 0.046), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
+	["Windows?+"] = { type = "Model", model = "models/phxtended/trieq1x1x1.mdl", bone = "Base", rel = "", pos = Vector(-6.906, -12.195, -9.145), angle = Angle(141.38901, 90, 0), size = Vector(0.046, 0.046, 0.046), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
+	["Windows?++"] = { type = "Model", model = "models/phxtended/trieq1x1x1.mdl", bone = "Base", rel = "", pos = Vector(-6.906, -12.195, -9.145), angle = Angle(141.38901, 147.64999, -68.628), size = Vector(0.046, 0.046, 0.046), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
+	["Windows?+++"] = { type = "Model", model = "models/phxtended/trieq1x1x1.mdl", bone = "Base", rel = "", pos = Vector(-6.906, -11.156, -9.145), angle = Angle(180, 147.64999, -53.199), size = Vector(0.046, 0.046, 0.046), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
+	["Windows?++++"] = { type = "Model", model = "models/props_phx/construct/metal_wire2x2x2b.mdl", bone = "Base", rel = "", pos = Vector(-6.907, -11.752, -7.877), angle = Angle(180, 147.64999, -53.199), size = Vector(0.046, 0.046, 0.046), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} }
+}
+
+SWEP.WElements = {
+}
+
+
 	
 	SWEP.WElements = {
-	["fuga"] = { type = "Model", model = "models/gjujutsu/fire_arrow/fire_arrow.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(10.338, -11.518, -11.329), angle = Angle(-15.394, 11.01, -21.651), size = Vector(0.47, 0.47, 0.47), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
-	["gaster"] = { type = "Model", model = "models/evangelos/undertale/gasterblaster.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(26.541, -5.684, -9.4), angle = Angle(-30, 21.666, -157.198), size = Vector(0.5, 0.5, 0.5), color = Color(40, 40, 40, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/weapons/v_slam/new light1", skin = 0, bodygroup = {} },
-	["laser"] = { type = "Model", model = "models/props_questionableethics/qe_primarylase5.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(16.913, -0.159, 1.699), angle = Angle(175.675, 11.01, -21.651), size = Vector(0.116, 0.116, 0.116), color = Color(40, 40, 40, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/weapons/v_slam/new light1", skin = 0, bodygroup = {} },
-	["shrine"] = { type = "Model", model = "models/gjujutsu/malevolent_shrine/malevolent_shrine.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(16.673, -3.691, -9.259), angle = Angle(175.675, 11.01, -21.651), size = Vector(0.034, 0.034, 0.034), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
-	["wheel"] = { type = "Model", model = "models/chromeda/wheel.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(30.587, -9.048, -16.744), angle = Angle(8.636, 38.217, -161.767), size = Vector(0.932, 0.932, 0.932), color = Color(255, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} }
 	}
 function SWEP:Initialize()
 
@@ -674,7 +711,7 @@ function SWEP:Deploy()
 	self:SetIronsights(false, self.Owner)  
 	self.Owner:SetFOV( 0, 0.5 )
 	
-	self.BeatSound = CreateSound( self.Owner, Sound( "weapons/gblaster/malevolent_holding.mp3" ) )
+	self.BeatSound = CreateSound( self.Owner, Sound( "weapons/gblaster/giygas_holding.mp3" ) )
 	if ( self.BeatSound ) then self.BeatSound:Play() end
    return true
 end
@@ -761,7 +798,7 @@ function SWEP:PrimaryAttack()
 			if ( self.LoopSound ) then
 				self.LoopSound:ChangeVolume( 1, 0.1 )
 			else
-				self.LoopSound = CreateSound( self.Owner, Sound( "weapons/gblaster/malevolent_firing.mp3" ) )
+				self.LoopSound = CreateSound( self.Owner, Sound( "weapons/gblaster/giygas_firing.mp3" ) )
 				if ( self.LoopSound ) then self.LoopSound:Play() end
 			end
 			if ( self.BeatSound ) then self.BeatSound:ChangeVolume( 0, 0.1 ) end
@@ -775,7 +812,7 @@ function SWEP:PrimaryAttack()
 		if ( self.LoopSound ) then
 			self.LoopSound:ChangeVolume( 1, 0.1 )
 		else
-			self.LoopSound = CreateSound( self.Owner, Sound( "weapons/gblaster/malevolent_firing.mp3" ) )
+			self.LoopSound = CreateSound( self.Owner, Sound( "weapons/gblaster/giygas_firing.mp3" ) )
 			if ( self.LoopSound ) then self.LoopSound:Play() end
 		end
 		if ( self.BeatSound ) then self.BeatSound:ChangeVolume( 0, 0.1 ) end
@@ -834,7 +871,7 @@ function SWEP:Holster()
 			self:ResetBonePositions(vm)
 			self.Owner:SetFOV( 0, 0.25 )
 		end
-		self.Owner:EmitSound(Sound("weapons/gauz_draw2/holster.mp3"))
+		self.Owner:EmitSound(Sound("weapons/gblaster/giygas_away.mp3"))
 	end
 	return true
 end
@@ -848,6 +885,29 @@ function SWEP:OnRemove()
 	self:Holster()
 	self:KillSounds()
 end
+
+local Mat = Material( "GIYGAS/GIYGAS4" )
+function SWEP:PrintWeaponInfo( x, y, alpha )
+	if self.InfoMarkup == nil then
+		local str, title_color, text_color = "", "<color=177,177,177,255>", "<color=177,177,177,255>"
+		str = "<font=TargetID>"
+		if ( self.Author != "" ) then str = str..title_color..language.GetPhrase( "Draedon" )..": </color>"..text_color..self.Author.."</color>\n" end
+		if ( self.Purpose != "" ) then str = str..title_color..language.GetPhrase( "Why don't you cry for help? No one can help you now!																																	" ) end
+		if ( self.Instructions != "" ) then str = str..title_color.."																																																			- Ñ̴̡̧̧̢̧̨̢̨̨̡̧̨̢̡̢̨̨̢̨̧̢̢̨̢̢̧̛͎̦̙̳͖͙̻͖̰̺͇͚̮͙̬͖̦̤̬̬͙̬̪̜̺̺͚͔̦̰̦̝̺͕͎͔͉̺̦͚̦͉̯̮͇̮̻͚͖̱̙̭̺̗̘̺̞̘̺̟̝̙̺̘̘̥̝̬̙̦̜̙̣̗̘̺̯͉̤͙͖͈̦̤̰̰͖̠̙̼̪̩͕̠̯̠̣̪̣͙̙̲̯̖͔͔̹̻̪̱͙̘̞͍̤̥̤͇̰̭͕͉̪̬͈͚̩̗̗̜̮̭̻͓͇̼͙̤̝̪̺̟̟̟̥͎̞̱̯͔̼̖̱̥̭͓̟̭̻̪̞͈̝͙̪͎͚̘̘̹͚̪̯̗̲̜͇̣̗̟̤̭̖͇̜͓̟͎̻̭͍͖̱̜̞̠̦̫̦͉͚̩̳̱̮̻̝͈͉̥͕̮̣͎̻̘̭͈͓̯̗̠̜͔͖̼̩̙̲̩͔̺̩͖̫̭̰̞̥̼͕̙̖̞̥̤͍̱̼̼͕͙̘̣̗̾͂̌̎̾̅̾̆̈̔̾̀͐́̾͗̋͌̀́̔͗̕͜͜͜͜͜͠ͅͅͅͅȨ̴̢̡̧̢̢̧̧̨̧̡̢̡̢̨̧̨̨̢̡̡̛̛̛̛̛̛̰̹̩̠̭͎̞͚͉͇̼͙̮̪̬̘̤͈̗̙̻̳̪̞̞̫͎̹͓̺͙͕̩̫̮̪͎̺̳̮͉̘͎͚̮̤̗̘͉̲̼͙̬̥̞̯̤̮̺̟̫̗̰̳̜͉̩͉͔̯͙̠̘͎̫͉̼̯̰̝̱̼̗͎̰̤̝̹͖͉̳͍͔̯̫̬̺̥̪̠̟̰̘̰̜̖̤͚͖͓̫̭͉͇̲̜̯͇̤̜̬͇͕͇͍͈͖̣̫͎̳͉̞̲̩̜̹͙̬̲͓̠̫̫̲͙͖̥̹̦̥̖̠͚̲̞̜̪͖͖͚̝̻̗̗͔͕̳̬̠̬͚̦͎̞̪̬̮̦̦̹͓̘̩̟̼̦̮̯͙̟̳̻͇͕̜͍͖̰͇̭̼̼͍͔̠͇̩͖̲̬̦͙͉̮́͊̐̿̾̈̌̎̓̂͌́͂̈̆̀́̔̌̔̀̍̍̉̌̈̆̊̔́̈̀͑̓̃̆̐͊̏̈̒̿̆͊̽̿̍͋͆̾͒̉̈́̾̓̿͆̊̈̍̔̈́̂̆̈́̃̃͐̃̔̅̾͐̒̊̾̓͊͒̌͊͛̒̈́̈͆͐̐́̎͛́̉̋̍̽͋̒͆̈̔͒̇͗͌̇̃̈̂͆̍̉̅̈̐̑̅͌͑̎̿̈́̐͋͊͒̓͐̿͂̀̍͐̓̔̂̈̊̀͆͂̓͌̅͗͐́͆͂̂̈́͐̾͒̐̀̓́̒̑́͛̇̓̔͆̏̃̐̂̏̕̕͘͘̚̕͘͘̚̕̕͘̚̚̕̕͘̕̚͘͜͜͜͜͜͜͜͜͜͜͠͝͝͝͝͠͝͠͠͠͝͠ͅͅͅͅŞ̶̢̛̛͙̦̘͔̩̜̲̺̺͚͓͍̗̪̩̱͚̠̲̗̫͕̄̎͗͆̈́͆̈́̀̎̀͑̆̏̓̍̏͌̂̿̒̑͗͌̽̆̊̊̑͗̄̾͆̾̍̐͌̈́͌̑́̿̊͐̀̀̈́̃̆̇̉̈́̀̉́͆͂̓̈̌͛̈́̽̌͐̑̀̈́͑̎̌͆̅̃͑́̀́̇̔͗͊͗̆̀͂̿̌̒͛̔̄͊̃̐́̔̒̒̋̀͆̋̈̉́̔̇͂̀͂́̋́͌̒̅͑̊͌̾̽͋̐̍͊́̿͛͛̅͗̄̈́̈̈́̓̀̇̉̊̿͂̀͗͒͊́̔͒̄͒̇̃̓̎̈́̃͐͗̈́̓͌̀̎̒̅̿̒̓̌̿̔͒̅̌̀͛̒̒́̂͐͗͘͘̚͘̚̕̕̕̕̕̕̕̚̚͜͝͠͠͠͠͠͠͝͠͝͠͝͠͝͝͝͝͝͝ͅS̴̡̧̨̨̡̡̡̨̨̢̡̡̧̨̛̛̛̛̛̛̛̛̤̻̠̟̰̦̥̥̙͓̤͎̹̣̝̯͕͇̪̖͚͈̗̥͚̰̹̞̺̗͓̼̝͔̼̝̫̻̩̖̹̜̪̯̯͔͉̦̰̘̱̘̭̻̖̘̭̝̤̤͙̼̼̯̥̱̙͕̠̝͙̩̖͕͔̥̮͔̪͓̙̟̝͕̞̫̩̥̘͇̲̟̫̟͓̰͎͓̥̘̺͕͔͖̥̠͕̟͇̙̗̠͋́̓̄͆͂̏͐̾͂̓͊͑̉͑̈́͊̋͂̄̓͒͌͌̀̒́͛͛́͗̋̀͛̈̆̈́̈̀͆̈́́̿̌̇̌́͆͛̈̌͆͛͂̓́̏̎͆̾̈́͂̃̽̿̄́̈́̃̀̈́̊͊̈́̈͒̋̏́̔́̐͌̅̄̌̎̈͌̇̂̀̂̂́̔̄̾̈͒̍͂̑́̆̒̒͋̎̽̇͆̍̈́̀̍̀̂̇́̂̓̒̐̓̏̾̑̂̅̒̐̾̒́̈́̊̽̇͆̇͊̃̅̇̌̇̀͂̈͋͗̌͊͊͛̓́͛́̈̿̋̈́̀̈̄̉̏̒̈́̇̅̃̊͒̏͋̉̑͐̇̀̆̋̀͊̍́͊̓͒͐͛̑̉̒͑́̉̔́͂̒̌̔̾͐̆̋͛̈̈̐͊̅̂̌̈́̍̿̔͐̉̑̓́̐̐͂̐̐̃̐̊̏̿͘̚̕͘͘̕̕̕̕̚̚̕͘̚̚͜͠͝͝͝͝͠͝͝͝͝͝͝͝͝͝͠͝ͅ" end
+		self.InfoMarkup = markup.Parse( str, 350 )
+	end
+	local xx, yy, ww, hh = x-6, y-6, 362, self.InfoMarkup:GetHeight() +24
+	draw.RoundedBox( 0, xx, yy, ww, hh, Color( 23, 23, 23, 255, alpha ) )
+	surface.SetDrawColor( 255, 255, 255, 255 )
+	surface.SetMaterial( Mat )
+	surface.DrawTexturedRect( xx, yy, ww, hh )
+	surface.SetDrawColor( 255, 255, 255, 255 )
+	surface.DrawOutlinedRect( xx, yy, ww, hh, 2 )
+	surface.SetDrawColor( 255, 255, 255, 255 )
+	surface.DrawOutlinedRect( xx, yy, ww, hh, 1 )
+	self.InfoMarkup:Draw( x + 5, y + 5, nil, nil, alpha )
+	self.InfoMarkup = nil
+end 
 
 function SWEP:GetViewModelPosition(pos, ang)
  
@@ -956,8 +1016,8 @@ function SWEP:DrawHUD()
 	
 	if self.Owner:KeyDown(IN_ATTACK2) and (self:GetIronsights() == true) then
 		
-		surface.SetDrawColor(0,0,0, 255)
-		surface.SetTexture(surface.GetTextureID("effects/combine_binocoverlay"))
+		surface.SetDrawColor(255,255,255, 1)
+		surface.SetTexture(surface.GetTextureID("GIYGAS/GIYGASTRANSPARENT"))
 		surface.DrawTexturedRect(self.LensTable.x, self.LensTable.y, self.LensTable.w, self.LensTable.h)
 	end 
 	
