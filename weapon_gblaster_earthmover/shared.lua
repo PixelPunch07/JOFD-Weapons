@@ -26,8 +26,8 @@ SWEP.WorldModel = "models/weapons/w_physics.mdl"
 SWEP.ShowViewModel = true
 SWEP.ShowWorldModel = true
 
-SWEP.Purpose			= ""
-SWEP.Instructions		= ""
+SWEP.Purpose			= "ALL THAT REMAINED IS WAR WITHOUT REASON"
+SWEP.Instructions		= "A MACHINE BUILT TO END WAR IS ALWAYS A MACHINE BUILT TO CONTINUE WAR"
 SWEP.BounceWeaponIcon	= false 
 
 SWEP.UseHands = true
@@ -67,26 +67,9 @@ SWEP.RunSightsAng = Vector (-19.8471, -33.9181, 10)
 local IRONSIGHT_TIME = 0.4
 
 SWEP.VElements = {
-	["Console+"] = { type = "Model", model = "models/props_lab/console02c.mdl", bone = "Base", rel = "", pos = Vector(-2.922, 1.46, -17.49), angle = Angle(0, 0, -90), size = Vector(0.18, 0.18, 0.18), color = Color(255, 255, 255, 255), surpresslightning = false, material = "phoenix_storms/metalset_1-2", skin = 0, bodygroup = {} },
-	["Laser"] = { type = "Model", model = "models/props_questionableethics/qe_primarylase5.mdl", bone = "Base", rel = "", pos = Vector(-0.917, 18.593, 0.615), angle = Angle(-90, 90, 0), size = Vector(0.2, 0.2, 0.2), color = Color(255, 255, 255, 106), surpresslightning = false, material = "phoenix_storms/metalfence004a", skin = 0, bodygroup = {} },
-	["Gaster"] = { type = "Model", model = "models/evangelos/undertale/gasterblaster.mdl", bone = "Base", rel = "", pos = Vector(0, -2.991, 10.357), angle = Angle(90, 0, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "phoenix_storms/metalfence004a", skin = 0, bodygroup = {} },
-	["Gaster+"] = { type = "Model", model = "models/evangelos/undertale/gasterblaster.mdl", bone = "Base", rel = "", pos = Vector(0, -2.991, 10.357), angle = Angle(90, 0, -90), size = Vector(0.5, 0.5, 0.5), color = Color(255, 255, 255, 255), surpresslightning = false, material = "phoenix_storms/metalset_1-2", skin = 0, bodygroup = {} },
-	["Laser+"] = { type = "Model", model = "models/props_questionableethics/qe_primarylase5.mdl", bone = "Base", rel = "", pos = Vector(-0.917, 18.593, 0.615), angle = Angle(-90, 90, 0), size = Vector(0.2, 0.2, 0.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "phoenix_storms/metalset_1-2", skin = 0, bodygroup = {} },
-	["Console"] = { type = "Model", model = "models/props_lab/console02c.mdl", bone = "Base", rel = "", pos = Vector(-2.922, 1.46, -17.49), angle = Angle(0, 0, -90), size = Vector(0.18, 0.18, 0.18), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 }
 
 SWEP.WElements = {
-	["Gaster"] = { type = "Model", model = "models/evangelos/undertale/gasterblaster.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(24.965, -5.685, -9.4), angle = Angle(-30, 21.666, -157.198), size = Vector(0.384, 0.384, 0.384), color = Color(255, 255, 255, 255), surpresslightning = false, material = "phoenix_storms/metalset_1-2", skin = 0, bodygroup = {} },
-	["Gaster+++++"] = { type = "Model", model = "models/props_buildings/row_corner_2.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(16.226, -5.257, -7.349), angle = Angle(-10.141, -15.271, -157.198), size = Vector(0.059, 0.059, 0.059), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["Gaster+++"] = { type = "Model", model = "models/props_buildings/project_destroyedbuildings04_skybox.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(13.123, -2.23, -3.411), angle = Angle(-21.661, -15.271, -157.198), size = Vector(0.085, 0.085, 0.085), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["Gaster++++++"] = { type = "Model", model = "models/props_buildings/watertower_001c.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(16.226, -5.257, -7.349), angle = Angle(-10.141, -15.271, -157.198), size = Vector(0.009, 0.009, 0.009), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["Console+"] = { type = "Model", model = "models/props_combine/weaponstripper.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(21.143, 3.296, -5.24), angle = Angle(-161.691, 98.208, -4.665), size = Vector(0.034, 0.034, 0.034), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["Laser"] = { type = "Model", model = "models/props_questionableethics/qe_primarylase5.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(16.913, -0.159, 1.699), angle = Angle(175.675, 11.01, -21.651), size = Vector(0.112, 0.112, 0.112), color = Color(255, 255, 255, 255), surpresslightning = false, material = "phoenix_storms/metalset_1-2", skin = 0, bodygroup = {} },
-	["Gaster+++++++"] = { type = "Model", model = "models/props_buildings/row_upscale.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(15.26, -0.207, -9.471), angle = Angle(-10.41, -6.815, -160.152), size = Vector(0.041, 0.041, 0.041), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["Gaster++++"] = { type = "Model", model = "models/Combine_Helicopter/helicopter_bomb01.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(31.9, -8.961, -8.594), angle = Angle(61.249, -15.271, -157.198), size = Vector(0.068, 0.068, 0.068), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["Gaster+"] = { type = "Model", model = "models/props_combine/breenglobe.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(28.464, -7.639, -13.11), angle = Angle(0.068, 21.666, -157.198), size = Vector(0.384, 0.384, 0.384), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-	["Console"] = { type = "Model", model = "models/props_lab/console02c.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(5.872, -0.667, -7.35), angle = Angle(-161.691, 98.208, -4.665), size = Vector(0.123, 0.123, 0.123), color = Color(255, 255, 255, 255), surpresslightning = false, material = "phoenix_storms/metalset_1-2", skin = 0, bodygroup = {} },
-	["Gaster++"] = { type = "Model", model = "models/Combine_Helicopter/helicopter_bomb01.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(32.452, -4.814, -10.193), angle = Angle(61.249, -15.271, -157.198), size = Vector(0.068, 0.068, 0.068), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 }
 function SWEP:Initialize()
 
