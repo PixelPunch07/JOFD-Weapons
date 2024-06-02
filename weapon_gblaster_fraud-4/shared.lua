@@ -19,7 +19,7 @@ SWEP.Slot			= 3
 SWEP.SlotPos			= 4
 SWEP.DrawAmmo			= true
 SWEP.DrawCrosshair		= true
-SWEP.ViewModelFOV		= 100
+SWEP.ViewModelFOV		= 85
 SWEP.ViewModelFlip		= false
 SWEP.ViewModel = "models/weapons/c_physcannon_def.mdl"
 SWEP.WorldModel = "models/weapons/w_physics.mdl"
@@ -27,7 +27,7 @@ SWEP.ShowViewModel = true
 SWEP.ShowWorldModel = true
 
 SWEP.Purpose			= "𝔗𝔥𝔢 𝔳𝔢𝔯𝔶 𝔪𝔬𝔫𝔰𝔱𝔢𝔯 𝔞𝔩𝔩 𝔱𝔥𝔞𝔱 𝔦𝔰 𝔩𝔦𝔳𝔦𝔫𝔤 𝔣𝔢𝔞𝔯𝔰"
-SWEP.Instructions		= "𝔖  𝔓  ℜ  𝔈  𝔄  𝔇    𝔗  ℌ  𝔄  𝔗  ̴͚̫̲̳͚͈̭̊̄̆̐̌͜ͅͅFͮ͗͑̈́ͦ̑͏͖̺̱̻͡  ̖̦͕̬͔̹͌̓E̤͙̰̖̘̣͕̰ͫͪ͢  A̟̤̖̗͈̦͔̮͐̒̇ͩ͋̃̾̇̕  ͖̭̳̥̝͇͚ͬ̈͝R̈́̐̽͡͏̠̫"
+SWEP.Instructions		= "T̷h̷o̶s̵e̸ ̸w̶h̶o̸ ̸e̴n̸d̸u̶r̵e̶ ̸u̶n̶t̵i̴l̷ ̸t̴h̴e̷ ̵l̷a̸s̵t̷ ̵m̷o̴m̵e̵n̵t̸ ̴s̸h̶a̵l̸l̶ ̷r̷e̸a̶c̸h̵ ̵a̷n̵ ̴a̶p̶o̸c̴a̷l̷y̶p̶s̵e̴ ̴f̷o̸r̶ ̶t̴h̷e̴m̶s̴e̷l̶v̷e̵s̶"
 SWEP.BounceWeaponIcon	= false 
 
 SWEP.UseHands = true
@@ -38,14 +38,14 @@ SWEP.AdminSpawnable		= false
 SWEP.AdminOnly          = true
 SWEP.HoldType	  		= "physgun"
 
-SWEP.Primary.NumberofShots 	= 25
+SWEP.Primary.NumberofShots 	= 55
 SWEP.Primary.ClipSize		= 1
 SWEP.Primary.DefaultClip	= 1
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Delay		= 0.06
 SWEP.Primary.Ammo 		= "ar2"
 SWEP.Primary.Force = 12000
-SWEP.Primary.Damage = 220000
+SWEP.Primary.Damage = 245000
 SWEP.Primary.Spread = 0.05
 SWEP.Primary.Recoil = 0.01
 
@@ -123,8 +123,9 @@ SWEP.VElements = {
 		["punishers punishment++"] = { type = "Model", model = "models/bloodp/bloodp.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(18.113, 5.565, -12.075), angle = Angle(0, 11.321, 104.151), size = Vector(0.12, 0.12, 0.12), color = Color(129, 0, 0, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} },
 		["the balance"] = { type = "Model", model = "models/tipthescales/scale.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(13.082, -6.038, -7.044), angle = Angle(0, 13.585, -158.491), size = Vector(0.07, 0.07, 0.07), color = Color(0, 255, 255, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/debug/debugwhite", skin = 0, bodygroup = {} },
 		["the watchers gaze"] = { type = "Model", model = "models/vindictus/wings/angel_wings.mdl", bone = "ValveBiped.Bip01_Spine", rel = "", pos = Vector(-14.088, 0, 2.013), angle = Angle(9.057, 88.302, 97.358), size = Vector(0.5, 0.5, 0.5), color = Color(0, 0, 0, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/debug/debugwhite", skin = 0, bodygroup = {} },
-		["they enter"] = { type = "Model", model = "models/props_lambda/superportal_inverted.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(0, 0, 0), angle = Angle(0, 0, 0), size = Vector(900, 900, 900), color = Color(0, 0, 0, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/debug/debugwhite", skin = 0, bodygroup = {} }
-		}
+		["they enter"] = { type = "Model", model = "models/props_lambda/superportal_inverted.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(0, 0, 0), angle = Angle(0, 0, 0), size = Vector(280, 280, 280), color = Color(0, 0, 0, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "models/debug/debugwhite", skin = 0, bodygroup = {} },
+		["THEY'REINTHEFUCKINGTREES"] = { type = "Model", model = "models/props_foliage/tree_pine01_8cluster.mdl", bone = "", rel = "", pos = Vector(16.913, -0.159, 1.699), angle = Angle(175.675, 11.01, -21.651), size = Vector(1, 1, 1), color = Color(0, 0, 0, 255), surpresslightning = false, bonemerge = false, highrender = false, material = "", skin = 0, bodygroup = {} }
+	}
 function SWEP:Initialize()
 
 	self:SetHoldType(self.HoldType)
@@ -702,7 +703,6 @@ function SWEP:IronSight()
 		end
 end
 
-
 function SWEP:Deploy()
 	self.Weapon:SendWeaponAnim(ACT_VM_DRAW);
 	self:SetNextPrimaryFire( CurTime() + self:SequenceDuration())
@@ -714,8 +714,8 @@ function SWEP:Deploy()
 	
 	self.BeatSound = CreateSound( self.Owner, Sound( "weapons/gblaster/twilightsend_holding.mp3" ) )
 	if ( self.BeatSound ) then self.BeatSound:Play() end
-   return true
-   BroadcastLua( "print( '𝔉𝔦𝔫𝔞𝔩𝔩𝔶. 𝔗𝔥𝔢 𝔖𝔱𝔯𝔢𝔫𝔤𝔱𝔥 𝔞𝔫𝔡 𝔒𝔲𝔱𝔠𝔬𝔪𝔢 ℑ 𝔥𝔞𝔳𝔢 𝔐𝔞𝔰𝔱𝔢𝔯𝔢𝔡 𝔞𝔯𝔢 ℜ𝔢𝔳𝔢𝔞𝔩𝔢𝔡. 𝔗𝔥𝔢 𝔗𝔦𝔪𝔢 𝔥𝔞𝔰 ℭ𝔬𝔪𝔢 𝔱𝔬 𝔓𝔲𝔫𝔦𝔰𝔥 𝔪𝔶 𝔚𝔯𝔬𝔫𝔤𝔡𝔬𝔦𝔫𝔤𝔰 𝔞𝔫𝔡 𝔜𝔬𝔲𝔯𝔰 𝔄𝔩𝔦𝔨𝔢' )" )
+   
+	   return true
 end
 
 function SWEP:Reload(tr)
@@ -728,8 +728,8 @@ end
 
 function SWEP:Think()
 	if ( self.Owner:IsPlayer() && ( self.Owner:KeyReleased( IN_ATTACK ) || !self.Owner:KeyDown( IN_ATTACK ) ) ) then
-		if ( self.LoopSound ) then self.LoopSound:ChangeVolume( 9999, 9999 ) end
-		if ( self.BeatSound ) then self.BeatSound:ChangeVolume( 9999, 9999 ) end
+		if ( self.LoopSound ) then self.LoopSound:ChangeVolume( 0, 0.1 ) end
+		if ( self.BeatSound ) then self.BeatSound:ChangeVolume( 1, 0.1 ) end
 	end
 	if self.Owner:KeyReleased(IN_ATTACK) then
 		self.CandoSpecial = false
@@ -814,7 +814,7 @@ function SWEP:PrimaryAttack()
 		if ( self.LoopSound ) then
 			self.LoopSound:ChangeVolume( 1, 0.1 )
 		else
-			self.LoopSound = CreateSound( self.Owner, Sound( "weapons/gblaster/twilightsend__firing.mp3" ) )
+			self.LoopSound = CreateSound( self.Owner, Sound( "weapons/gblaster/twilightsend_firing.mp3" ) )
 			if ( self.LoopSound ) then self.LoopSound:Play() end
 		end
 		if ( self.BeatSound ) then self.BeatSound:ChangeVolume( 0, 0.1 ) end
@@ -826,11 +826,43 @@ function SWEP:PrimaryAttack()
 		bullet.Src = self.Owner:GetShootPos()
 		bullet.Dir = self.Owner:GetAimVector()
 		bullet.Spread = Vector( self.Primary.Spread * 0.1 , self.Primary.Spread * 0.1, 0)
+		bullet.Tracer = 5
+		bullet.Force = self.Primary.Force
+		bullet.Damage = self.Primary.Damage
+		bullet.AmmoType = self.Primary.Ammo
+		bullet.TracerName = "3allend_Ray"
+		bullet.Callback = function(attacker, trace, dmginfo)
+						local g = math.random( 1, 3 )
+						if ( g == 1 ) then
+						dmginfo:SetDamageType(DMG_BURN)
+						elseif ( g == 2 ) then
+						dmginfo:SetDamageType(DMG_BURN)
+						elseif ( g == 3 ) then
+						dmginfo:SetDamageType(DMG_BURN)
+						end
+						end
+		local rnda = self.Primary.Recoil * -1 
+		local rndb = self.Primary.Recoil * math.random(-1, 1) 
+		self:ShootEffects()
+		self.Owner:FireBullets( bullet ) 
+		self.Owner:EmitSound(Sound(""))
+		--self.Owner:EmitSound(Sound("ambient/machines/thumper_hit.wav"))
+		self.Owner:EmitSound(Sound(""))
+		self.Owner:ViewPunch( Angle( rnda,rndb,rnda ) ) 
+		self:SetNextPrimaryFire( CurTime() + self.Primary.Delay )
+		self:SetNextSecondaryFire( CurTime() + self.Primary.Delay ) 
+ 
+	local bullet = {} 
+              
+		bullet.Num = self.Primary.NumberofShots
+		bullet.Src = self.Owner:GetShootPos()
+		bullet.Dir = self.Owner:GetAimVector()
+		bullet.Spread = Vector( self.Primary.Spread * 0.1 , self.Primary.Spread * 0.1, 0)
 		bullet.Tracer = 1
 		bullet.Force = self.Primary.Force
 		bullet.Damage = self.Primary.Damage
 		bullet.AmmoType = self.Primary.Ammo
-		bullet.TracerName = "twilightsend__ray"
+		bullet.TracerName = "twilightsend_ray"
 		bullet.Callback = function(attacker, trace, dmginfo)
 						local g = math.random( 1, 3 )
 						if ( g == 1 ) then
@@ -971,13 +1003,17 @@ function SWEP:DrawHUD()
     local x,y = ScrW(),ScrH()
     local w,h = x/2,y/2
     
-    surface.SetDrawColor(Color(0,0,0))
+    surface.SetDrawColor(Color(255,255,0))
     surface.DrawRect(w - 1, h - 3, 3, 7)
     surface.DrawRect(w - 3, h - 1, 7, 3)
 
+	surface.SetDrawColor(Color(255,255,0))
+    surface.DrawRect(w - 2, h - 4, 4, 8)
+    surface.DrawRect(w - 4, h - 2, 8, 4)
+
     surface.SetDrawColor(Color(255,255,0))
-    surface.DrawLine(w, h - 5, w, h + 5)
-    surface.DrawLine(w - 5, h, w + 5, h)
+    surface.DrawLine(w, h - 8, w, h + 8)
+    surface.DrawLine(w - 8, h, w + 8, h)
 
     local time = CurTime() * -360
 	local time2 = CurTime() * 360
@@ -985,7 +1021,7 @@ function SWEP:DrawHUD()
     local gap = 10 * scale
     local length = gap + 20 * scale
 
-    surface.SetDrawColor(255,255,255)
+    surface.SetDrawColor(255,255,0)
 
     self:DrawRotatingCrosshair(w,h,time,      length,gap)
     self:DrawRotatingCrosshair(w,h,time + 90, length,gap)
@@ -1006,14 +1042,4 @@ function SWEP:DrawHUD()
     self:DrawRotatingCrosshair(w,h,time2 + 135,length*2,gap*4)
     self:DrawRotatingCrosshair(w,h,time2 + 225,length*2,gap*4)
     self:DrawRotatingCrosshair(w,h,time2 + 315,length*2,gap*4)
-
-	self:DrawRotatingCrosshair(w,h,time,      length*3,gap*5)
-    self:DrawRotatingCrosshair(w,h,time + 90, length*3,gap*5)
-    self:DrawRotatingCrosshair(w,h,time + 180,length*3,gap*5)
-    self:DrawRotatingCrosshair(w,h,time + 270,length*3,gap*5)
-	
-	self:DrawRotatingCrosshair(w,h,time + 45, length*3,gap*5)
-    self:DrawRotatingCrosshair(w,h,time + 135,length*3,gap*5)
-    self:DrawRotatingCrosshair(w,h,time + 225,length*3,gap*5)
-    self:DrawRotatingCrosshair(w,h,time + 315,length*3,gap*5)
 end
