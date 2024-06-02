@@ -26,8 +26,8 @@ SWEP.WorldModel = "models/weapons/w_physics.mdl"
 SWEP.ShowViewModel = true
 SWEP.ShowWorldModel = true
 
-SWEP.Purpose			= "Fuck off"
-SWEP.Instructions		= "No, just no. It's too early for this shit"
+SWEP.Purpose			= "i promised you something"
+SWEP.Instructions		= "you would regret every coming here"
 SWEP.BounceWeaponIcon	= false 
 
 SWEP.UseHands = true
@@ -42,11 +42,11 @@ SWEP.Primary.NumberofShots 	= 25
 SWEP.Primary.ClipSize		= 1
 SWEP.Primary.DefaultClip	= 1
 SWEP.Primary.Automatic		= true
-SWEP.Primary.Delay		= 0.08
+SWEP.Primary.Delay		= 0.07
 SWEP.Primary.Ammo 		= "ar2"
 SWEP.Primary.Force = 2400
 SWEP.Primary.Damage = 8500
-SWEP.Primary.Spread = 0.91
+SWEP.Primary.Spread = 0.90
 SWEP.Primary.Recoil = 0.01
 
 SWEP.Secondary.ScopeZoom	= 10
