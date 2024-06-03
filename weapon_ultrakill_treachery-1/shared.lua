@@ -13,7 +13,7 @@ SWEP.WepSelectIcon        = surface.GetTextureID("vgui/entities/weapon_scary_gar
 end
 
 SWEP.Category            = "Journey of the Damned"
-SWEP.PrintName            = "Treachery - Colliding Stars"
+SWEP.PrintName            = "Treachery - Colliding Stars over a Frozen Sea"
 SWEP.Slot            = 3
 SWEP.SlotPos            = 4
 SWEP.DrawAmmo            = true
