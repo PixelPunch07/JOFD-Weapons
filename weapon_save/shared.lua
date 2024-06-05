@@ -1292,7 +1292,7 @@ end
 	
 	
 
-hook.Add( "EntityTakeDamage", "TitaniumArmorHookThing", function(target, dmginfo) 
+function savenegate(attacker, target, dmginfo)
     if target:IsPlayer() and target:HasWeapon("weapon_save") and target:GetNWInt("DETERMINATION") >= 5000 then
 	     local negate = target:GetNWInt("DETERMINATION") / 30000
 	    dmginfo:ScaleDamage(negate)
@@ -1305,7 +1305,7 @@ hook.Add( "EntityTakeDamage", "TitaniumArmorHookThing", function(target, dmginfo
 		
     end
 	
-end)
+end
 	
 	
 	
