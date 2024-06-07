@@ -13,21 +13,21 @@ killicon.Add("weapon_gblaster_badtime", "effects/killicons/weapon_gblaster", col
 SWEP.WepSelectIcon		= surface.GetTextureID("HUD/swepicons/weapon_gblaster/icon") 
 end
 
-SWEP.Category			= "w̷͉͖̯̯̙̩̯̫̭̥̒̈́̆́͋͗̐̿̔̂͆̀͘̚͜͝h̶͎́́̋͂́̆̎́̍͊̏̎͝ý̶̡̺͇̱̻̲͉̲̥͈͎̱̲͓͉͓̼͉͎̰̳̦͜"
-SWEP.PrintName			= "f̵̡̡̢͔̖̺͔̮̭̩̼̗̤̥̘̪̥̰̘̣̟̭̥̙̤͚͈͎̬̗̪̹̝̖̪͚̬͕͇͈͈̼͇͙̱̝̾̋̒̒̉͊̋̑̏̎̒̀̈́̅̌͒̆́̓̍͂̂̉́̑͒̓͑̐̽̾̔́̍̍́͑̀̾̊̋̌̓͗̕͜͠͠ͅu̷̢͇͖̜̗̳̦͖͈͖̗͉̲̲͈̠̝̲̙̬̽͌͌̋͜͜c̸̢̛̣̩͖̞̟͚̼͍̞͕̫̥͎̗̙̺̈̀̏̈́̍̔̋͋̂̎̉͋̚͝ͅk̴̢̢̧͖̹͈̹̲͇̣̝͕̱͍͖̱͍͇͇̹̏͊́̀͋̀̿̈ ̸̨̛̛̛̠̭̲̥͙̠͈͙͍͈͓͇̫͓̠̬͈͕̤̠̼̗̈̿̐͗̇͆̄̈̎̑͐̀͝͝͠y̴̢̨̧̡̡̛̖̞̙͕̩̺͕̹̗̭̰͕̼̗̥̥͇̲̤̦͔̫͈͙̾̒̓͋̿͊͂̾̉͛̾͌͆̈̏͋̊̾̎̔͑̂͒̒̎̏̾̒̍̎͆̔͒̌̊̐̕̚̕̚̕͘͝͝͝͝ͅơ̶̧̡̡̛̛̻̪̺͚̜͈̣̼̗̼̖̜̫͓̫̞̘͓̓̀͂̅̑͗̾̔͂͆̾̔̒͆̑̀͆͑͐̊́̐̄̎̓̋̉̏̄́̾̔̎̋̓̆͐̃̑̇̑̚̚͘͘ͅų̶̢̨͙̥̩̦̦̮͕̬̮̭̱͙̬̘̟̩̜̹͈̘̾̂͂̔̽̄͑͂̿̍̎͗́̈́̄́́̋̕͠͠͝"
+SWEP.Category			= ""
+SWEP.PrintName			= "K I N G"
 SWEP.Slot			= 3
 SWEP.SlotPos			= 4
 SWEP.DrawAmmo			= true
 SWEP.DrawCrosshair		= true
-SWEP.ViewModelFOV		= 110
+SWEP.ViewModelFOV		= 85
 SWEP.ViewModelFlip		= false
 SWEP.ViewModel = "models/weapons/c_physcannon_def.mdl"
 SWEP.WorldModel = "models/weapons/w_physics.mdl"
 SWEP.ShowViewModel = true
 SWEP.ShowWorldModel = true
 
-SWEP.Purpose			= "f̶̩̼̼̼̦͇͕͍͇̭̲̰̞̭̻̹͔̦͔̿̿͗̇̇̾͆̆̉̀̄̾͊̔̋̏̄͘̕̕͜͠ͅa̶̧͈̭̭̥̼̬͍͍̯͓̗͔̮͎͚̺̫̯̦̝̫͎̟͕̮̤̻͎̪̱̪͚̩̣͂̽̿̑͆̎͂͐̾̐̋̉͋͊̀̿̎̀̽͗̈̀͑̇̉̄̇̉̓͗̚̕̕̕͜͜͜͝͝͝g̶̡̧̲͚̺̼̹͔͔̠̹̫̣͈͓̹̤̱̳̫̮͎͖̠͉̯̹̲̯̬̙̥͐̃̀̈́̎̋̀̌̌͗̉͌̂́͑͌̈͑̎͆͛̄͑̔̆͜͠ͅͅģ̴̨̢̛͉͇̥̰̠͈̳͔̱̱͔̤̫͍̻̼͖̞̭̭̖̞̯̮̦̱̳́̂̊̈́̐̎̽̇̓̋̈͌͗̄̀̿̄̓̄̄̅̈́̇̌̓́͑̐͑͘͘͜͠͝ͅo̵̢̨̡̧̧̰̙̺̣̞̜͇̖̭͎͓̝̙͚̩̗̞̮͖̲̞͇͖̺̰̠̞͈͓̳̳͚̥̮͕̫̝͓̺͎̦̽̂̒͊͌̔̋͌̐͑̾̓̃̀͛̐̽̄̀͂́̽̃̈́̒̆͐͒̆̈͘͘̚̚̕͝͠͝͠͠ͅṯ̸͇̖͕̥͍͙͎̀͋̍̐͐̀ͅ"
-SWEP.Instructions		= "M̴̨̡̧̢̢̢̛̩͔̲͖͍̦͇̰̘̮̰̤̦̻̞̱̤͇̺̥͑̈́͌̒́̌̈́̅̍́̾͊̽̽̍̕̚̕͠͠Ę̷̟̮͓̞̜̹̫̞̞̼̤̈́͂̍̓͆̊͌͠G̸̖̝̟̱̰̖̻͂͒͂̈́͐̉͒̆̐̇̋͘̕A̴̧̛̼̹̜̩̤̜̯͎͕̮̬͍̝̘͙̭̫̥͈̬͇̘̣͚̻̘̤̪͓̠̭̭̩̘͙̟̟̲̳͈͈̜̋̔̓͆̄́̿̾̅̃͗̇̀̈̈́̒̇͂̒̒͒̀͛͌̉̈̎́́̑̒̈́̓̀̚͘͘͜͜͝ͅ ̴̢̡̙͓̤̞̲̰̯͍͕̩̬͎̝̍͛̂̇͂͛̅̃̒̍̑̀͌̾͐͒͐͑̓̉̀̎͌̽́̄͗̍̈́͑̽͌̋̐͂̽̆̋̑̈́̿̂̊̃̑͘͝f̵̡̧̛̪̘̳̜͇̪̫̤͔̄̂̐͛̑̑͒̅̅̊̇̌͛̈̒́ͅa̷̢̛͎̜͉͚͖̹̭̥͈͉̱̫̺̳͖̭̖̔̆̾̇́̂̽̓̚͘͜͝g̷̯̦̦͓̣͇̼̘̰͑͗̽̇̈́̀̍̑̽̒͑̿̂̂̽̈̔̉̔̍̽̐̽̓̈́̃͑̓̃̐̀͗̑́̓̃̉̓͊͛͗̔͘̕̕̕̚͘͜͝g̵̗̺͓̜̻̭̣̹̹̰͈͕̫̾͜ͅơ̶̧̨̥̰̘͚̟̯̼̬̤̞̜͍̣͓̠̘͙̦̮̤̖̞̰͎͖̻̯̞͇͖̩̹̗͙̳̹̩̳̦̇̀̆̇̎̉̄̂́͌̀̓̋̒̆̉̓̍̃̄̀̓͗̾̉̈́͑͐́̑͋̽̾͆̕͜͜͝͠͝͝ͅṯ̶̢̢̨̞͍͈̼̮͙͓̤̥̖̝̣̤͍̲̪̼̫̲͚̳͍̥͕̺̱̖͎̟͔͈̭͉̠͚̰̹̳̮̹̺̭͓͓̯̆͒̂͊̒́"
+SWEP.Purpose			= "Sing a song of sorrow in a world with no time."
+SWEP.Instructions		= "The ability to erase the future and past time, sit upon the apex for all eternity."
 SWEP.BounceWeaponIcon	= false 
 
 SWEP.UseHands = true
