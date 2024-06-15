@@ -26,8 +26,8 @@ SWEP.WorldModel = "models/weapons/w_physics.mdl"
 SWEP.ShowViewModel = true
 SWEP.ShowWorldModel = true
 
-SWEP.Purpose			= "Vaporize players with a ton of damage"
-SWEP.Instructions		= "M1 to shoot laser."
+SWEP.Purpose			= "The king of curses travels the ages with this."
+SWEP.Instructions		= "A divine feat, those who bear this open themselves to being the vessel of the king."
 SWEP.BounceWeaponIcon	= false 
 
 SWEP.UseHands = true
