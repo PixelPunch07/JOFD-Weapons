@@ -26,8 +26,8 @@ SWEP.WorldModel = "models/weapons/w_physics.mdl"
 SWEP.ShowViewModel = true
 SWEP.ShowWorldModel = true
 
-SWEP.Purpose			= "Vaporize players with a ton of damage"
-SWEP.Instructions		= "M1 to shoot laser."
+SWEP.Purpose			= "The aftermath of the timeline when it was deleted. I was the only survivor. If you are reading this.... I'm sorry."
+SWEP.Instructions		= "But there's no escape, once your soul has strings attached to this thing, you're no longer real. You no longer exist. My words cannot overcome the screaming of the centillions of gods screaming for mercy feeling the burning pain of flesh for the first and last time. This is farewell."
 SWEP.BounceWeaponIcon	= false 
 
 SWEP.UseHands = true
