@@ -26,8 +26,8 @@ SWEP.WorldModel = "models/weapons/w_physics.mdl"
 SWEP.ShowViewModel = true
 SWEP.ShowWorldModel = true
 
-SWEP.Purpose			= "Vaporize players with a ton of damage"
-SWEP.Instructions		= "M1 to shoot laser."
+SWEP.Purpose			= "The original wielder of this weapon was never found. I took it with me to a bar, and in there a bartender fueled by flame offered a beer, needless to say I always accept such an offering."
+SWEP.Instructions		= "The only payment method there was, was a showdown of firepower."
 SWEP.BounceWeaponIcon	= false 
 
 SWEP.UseHands = true
